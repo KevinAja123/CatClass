@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catholic Classic — Sacred Art</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Cinzel:wght@500;600&family=Montserrat:wght@300;400;500;600;700;800;900&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* Gaya mengikuti poster rujukan: kulit hitam, kertas kusut, judul condensed raksasa,
+   serif swash, Montserrat, kartu lengkung, pita bunga, barcode, bintang kilau.
+   Palet: Deep Burgundy #4A151B, Aged Parchment #EFE6D5, Muted Brass #B88A2D. */
+:root{
+  --maroon:#4A151B;--crimson:#6B2229;--maroon-d:#2A0A0E;--wine:#4A151B;--wine-d:#3A1016;--wine-dd:#2A0A0E;--parch:#EFE6D5;--brass:#B88A2D;
+  --gold:#B88A2D;--gold-hi:#DEC27C;--yellow:#B88A2D;
+  --royal:#EFE6D5;--cream:#EFE6D5;--ink:#2A1013;--stone:#2f1115;
+  --ease:cubic-bezier(.77,0,.175,1);--out:cubic-bezier(.22,1,.36,1);
+  --leather:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.06' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeDiffuseLighting lighting-color='%23fff' surfaceScale='1.4'%3E%3CfeDistantLight azimuth='225' elevation='58'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='420' height='420' filter='url(%23a)'/%3E%3C/svg%3E");
+  --crumple:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='700'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.007' numOctaves='5' seed='9' stitchTiles='stitch'/%3E%3CfeDiffuseLighting lighting-color='%23fff' surfaceScale='3.2'%3E%3CfeDistantLight azimuth='45' elevation='48'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='700' height='700' filter='url(%23c)'/%3E%3C/svg%3E");
+  --floral:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='38' height='14'%3E%3Crect width='38' height='14' fill='%23E6D4A8'/%3E%3Cpath d='M0 7Q9.5 1 19 7T38 7' fill='none' stroke='%235a3d1c' stroke-width='.8'/%3E%3Ccircle cx='9.5' cy='4.2' r='2' fill='%237A1420'/%3E%3Ccircle cx='28.5' cy='9.8' r='2' fill='%237A1420'/%3E%3Ccircle cx='9.5' cy='4.2' r='.7' fill='%23E5B53A'/%3E%3Ccircle cx='28.5' cy='9.8' r='.7' fill='%23E5B53A'/%3E%3Cpath d='M14 5.5c2-2 4-2 5 0-2 1-3 1-5 0zM24 8.5c-2 2-4 2-5 0 2-1 3-1 5 0z' fill='%23556b2f'/%3E%3C/svg%3E");
+  color-scheme:light;
+}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:#1d0a0d;color:var(--ink);font:15px/1.7 Montserrat,system-ui,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.leather{background:radial-gradient(120% 90% at 50% 40%,transparent 40%,rgba(0,0,0,.55)),var(--leather) 0 0/420px,#34100f;background-blend-mode:normal,multiply,normal}
+.paper{background:var(--crumple) center/700px,#EFE6D5;background-blend-mode:multiply}
+.star{display:inline-block;width:24px;height:24px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0C13 9 15 11 24 12 15 13 13 15 12 24 11 15 9 13 0 12 9 11 11 9 12 0Z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0C13 9 15 11 24 12 15 13 13 15 12 24 11 15 9 13 0 12 9 11 11 9 12 0Z'/%3E%3C/svg%3E") center/contain no-repeat}
+.sw{font-family:"Playfair Display",serif;font-weight:400}
+.sw b{font-family:"Pinyon Script",cursive;font-weight:400;font-size:1.32em;line-height:0;margin-right:.02em;position:relative;top:.06em}
+.barcode{display:inline-block;color:#d8cfbf}
+.barcode i{display:block;width:118px;height:24px;background:repeating-linear-gradient(90deg,currentColor 0 1px,transparent 1px 2px,currentColor 2px 4px,transparent 4px 5px,currentColor 5px 6px,transparent 6px 8px,currentColor 8px 9px,transparent 9px 12px,currentColor 12px 15px,transparent 15px 16px)}
+.barcode span{display:block;font-size:7px;letter-spacing:.18em;margin-top:1px}
+
+/* ---------- nav ---------- */
+nav.top{position:fixed;inset:0 0 auto;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:14px max(3vw,14px);color:var(--royal);transition:background .6s,padding .6s}
+nav.top.solid{background:transparent;padding-block:8px;}
+.mark{font-weight:800;letter-spacing:.14em;font-size:13px;text-decoration:none;display:flex;align-items:center;gap:8px}
+.mark .star{width:14px;height:14px;color:var(--gold)}
+.links{display:flex;flex-wrap:wrap}
+.links a{text-decoration:none;font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;padding:12px 12px;opacity:.85;transition:opacity .3s,color .3s}
+.links a:hover{opacity:1;color:var(--gold-hi)}
+
+/* ---------- wipe ---------- */
+.wipe{position:fixed;inset:0;z-index:90;pointer-events:none;transform:translateY(100%);display:grid;place-items:center;color:var(--royal)}
+.wipe .sw{font-size:clamp(40px,7vw,90px);opacity:0;transition:opacity .4s}
+
+.wipe.cover{transform:none;transition:transform .75s var(--ease)}.wipe.cover .sw{opacity:1;transition-delay:.3s}
+.wipe.leave{transform:translateY(-100%);transition:transform .85s var(--ease)}
+
+/* ---------- HERO (slide 1) ---------- */
+.s1{position:relative;min-height:100svh;display:grid;grid-template-columns:clamp(96px,11vw,150px) minmax(0,1fr) clamp(96px,11vw,150px);gap:clamp(10px,1.6vw,22px);padding:clamp(60px,7vh,76px) clamp(10px,2.4vw,34px) clamp(18px,2.4vw,30px);overflow:hidden;color:var(--royal)}
+.side{position:relative;overflow:hidden;-webkit-mask:linear-gradient(transparent,#000 9%,#000 91%,transparent);mask:linear-gradient(transparent,#000 9%,#000 91%,transparent);opacity:0;transition:opacity 1.6s var(--out) .4s}
+.ready .side{opacity:1}
+.side .trk{position:absolute;left:0;right:0;top:0;display:flex;flex-direction:column;gap:clamp(14px,1.6vw,22px);animation:stup 70s linear infinite}
+.side.r .trk{animation-name:stdown}
+@keyframes stup{to{transform:translateY(-50%)}}@keyframes stdown{from{transform:translateY(-50%)}to{transform:none}}
+.st-it{margin:0}
+.st-it img{display:block;width:100%;aspect-ratio:504/653;object-fit:cover;filter:sepia(.3) saturate(.85) brightness(.9)}
+.st-it figcaption{margin-top:7px;font-family:"Playfair Display",serif;font-size:11px;letter-spacing:.06em;color:#cdbfa8;text-align:center;line-height:1.3}
+.st-it figcaption b{display:block;font-family:Montserrat,sans-serif;font-weight:500;font-size:12px;letter-spacing:.2em;color:var(--gold)}
+.cl-side{-webkit-mask:radial-gradient(70% 60% at 30% 70%,#000 35%,transparent 100%);mask:radial-gradient(70% 60% at 30% 70%,#000 35%,transparent 100%);position:absolute;z-index:0;bottom:-2%;height:62%;width:auto;opacity:0;pointer-events:none;filter:sepia(.35) brightness(.6);transition:opacity 2.4s var(--out) .6s,transform 3s var(--out) .6s}
+.cl-side.l{left:-6%;transform:translateX(-30%)}.cl-side.r{right:-6%;transform:translateX(30%) scaleX(-1)}
+.ready .cl-side.l{opacity:.45;transform:none}.ready .cl-side.r{opacity:.45;transform:scaleX(-1)}
+.cl-top{-webkit-mask:radial-gradient(closest-side,#000 40%,transparent 100%);mask:radial-gradient(closest-side,#000 40%,transparent 100%);position:absolute;z-index:0;left:50%;top:-8%;width:min(78%,900px);opacity:0;pointer-events:none;filter:sepia(.3) brightness(.55);transform:translate(-50%,-30px);transition:opacity 2.4s var(--out) .3s,transform 3s var(--out) .3s}
+.ready .cl-top{opacity:.6;transform:translate(-50%,0)}
+.cl-paint{-webkit-mask:radial-gradient(closest-side,#000 50%,transparent 100%);mask:radial-gradient(closest-side,#000 50%,transparent 100%);position:absolute;z-index:2;right:-6%;bottom:4%;width:min(26%,340px);opacity:0;pointer-events:none;filter:sepia(.4) brightness(.8);transform:translateX(40px);transition:opacity 2.4s var(--out) 1.4s,transform 3s var(--out) 1.4s}
+.cl-paint.l{right:auto;left:-4%;transform:translateX(-40px) scaleX(-1)}
+.ready .cl-paint{opacity:.7;transform:none}.ready .cl-paint.l{transform:scaleX(-1)}
+.side figure{margin:0;opacity:0;transform:translateX(-40px);transition:opacity 1.2s var(--out),transform 1.4s var(--out);transition-delay:var(--d)}
+.side.r figure{transform:translateX(40px)}
+.ready .side figure{opacity:1;transform:none}
+.box{aspect-ratio:4/4.6;background:#2A0A0E;border:1px solid #5d5142;padding:5px;}
+.box img{width:100%;height:100%;object-fit:cover;filter:sepia(.45) contrast(1.05) brightness(.95)}
+.band{height:13px;margin-top:5px;background:var(--floral) 0 0/38px 13px;border-block:1px solid #3a2a15;}
+.poster{position:relative;display:flex;flex-direction:column;align-items:center;min-height:calc(100svh - clamp(60px,7vh,76px) - clamp(18px,2.4vw,30px))}
+.mega{position:relative;z-index:1;margin:clamp(22px,4vh,48px) 0 0;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(78px,15.4vw,250px);line-height:.82;letter-spacing:-.005em;color:var(--crimson);text-align:center;white-space:nowrap}
+.mega .c{display:inline-block;clip-path:inset(0 0 100% 0);transform:translateY(30%);transition:clip-path 1.2s var(--out),transform 1.2s var(--out);transition-delay:var(--d)}
+.ready .mega .c{clip-path:inset(-10% 0 -10% 0);transform:none}
+.mega .c.i{position:relative}
+.spark{position:absolute;z-index:4;color:#fff6dc;}
+/* hero elements from user assets */
+.poster{overflow:hidden}
+.sun{position:absolute;z-index:0;left:50%;top:-2%;width:min(58vh,560px);transform:translateX(-50%) scale(.5);opacity:0;transition:opacity 2.2s var(--out) .2s,transform 2.6s var(--out) .2s;pointer-events:none}
+.ready .sun{opacity:.9;transform:translateX(-50%) scale(1)}
+.sun img{width:100%;animation:spin 160s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hands{position:relative;z-index:3;display:flex;justify-content:center;width:min(86%,900px,calc((100svh - 400px)*1.56));margin-top:calc(clamp(78px,15.4vw,250px)*-.2);cursor:zoom-in}
+.hands{-webkit-mask:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}
+.hands img{height:auto;opacity:0;transition:transform 2.6s var(--ease) .7s,opacity 1.4s var(--out) .7s}
+.hands .hl{width:47.7%;transform:translateX(-70%)}.hands .hr{width:52.3%;transform:translateX(70%)}
+.ready .hands img{opacity:1;transform:none}
+.hands .spark{left:51.2%;top:27%;transform:translate(-50%,-50%) scale(0) rotate(-120deg);transition:transform 1.2s var(--out) 3.1s;width:34px;height:34px}
+.ready .hands .spark{transform:translate(-50%,-50%) scale(1)}
+.hands .flash{position:absolute;left:51.2%;top:27%;width:10px;height:10px;border-radius:50%;transform:translate(-50%,-50%);pointer-events:none}
+.ready .hands .flash{animation:flash 2.2s var(--out) 3.1s 1 both,glow 3.2s ease-in-out 5.3s infinite}
+@keyframes flash{0%{}100%{}}
+@keyframes glow{0%,100%{}50%{}}
+.clouds{position:absolute;z-index:2;left:-4%;right:-4%;bottom:clamp(26px,4vh,44px);height:42%;background-repeat:no-repeat;background-size:cover;background-position:50% 100%;filter:sepia(.25) saturate(.9) brightness(.9);mask:radial-gradient(ellipse 50% 62% at 50% 78%,#000 38%,transparent 90%);-webkit-mask:radial-gradient(ellipse 50% 62% at 50% 78%,#000 38%,transparent 90%);opacity:0;transform:translateY(60px);transition:opacity 2s var(--out) 1.2s,transform 2.4s var(--out) 1.2s;pointer-events:none}
+.ready .clouds{opacity:.95;transform:none}
+@keyframes drift2{to{background-position:-792px 100%}}
+.cherubs{position:absolute;z-index:3;left:50%;bottom:clamp(90px,15vh,150px);width:min(40%,480px);opacity:0;transform:translate(-50%,40px);transition:opacity 2s var(--out) 1.8s,transform 2.2s var(--out) 1.8s;pointer-events:none}
+.ready .cherubs{opacity:1;transform:translate(-50%,0)}
+.cherubs img{width:100%;animation:bob 7s ease-in-out infinite;}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.cut{position:relative;z-index:2;margin:calc(clamp(78px,15.4vw,250px)*-.5) 0 0;width:min(78%,calc((100svh - 230px)*1.12));aspect-ratio:1283/1200;opacity:0;transform:translateY(60px) scale(1.04);filter:blur(10px);transition:opacity 1.6s var(--out) .5s,transform 2s var(--out) .5s,filter 1.6s var(--out) .5s;-webkit-mask:radial-gradient(ellipse 58% 60% at 50% 55%,#000 52%,transparent 100%);mask:radial-gradient(ellipse 58% 60% at 50% 55%,#000 52%,transparent 100%);cursor:zoom-in}
+.ready .cut{opacity:1;transform:none;filter:none}
+.cut img{width:100%;height:100%;object-fit:cover;will-change:transform}
+.glint{position:absolute;z-index:4;color:#fff;width:18px;height:18px;opacity:0;animation:tw 3.6s ease-in-out infinite;animation-delay:var(--d)}
+@keyframes tw{0%,100%{opacity:0;transform:scale(.3) rotate(0)}50%{opacity:.95;transform:scale(1) rotate(45deg)}}
+.swline{position:absolute;z-index:5;left:0;right:0;bottom:clamp(40px,6vh,64px);display:flex;justify-content:center;align-items:center;gap:.28em;font-size:clamp(30px,4.4vw,70px);line-height:1;color:#EFE6D5;opacity:0;transform:translateY(20px);transition:opacity 1.4s var(--out) 1.5s,transform 1.4s var(--out) 1.5s}
+.ready .swline{opacity:1;transform:none}
+.swline .dash{width:1.1em;height:4px;background:var(--crimson)}
+.pfoot{position:absolute;z-index:5;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;font-weight:300;font-size:clamp(10px,1vw,13px);letter-spacing:.26em;text-transform:uppercase;color:#d8cfbf}
+.pfoot .cr{display:flex;gap:clamp(12px,2.4vw,40px);flex-wrap:wrap;justify-content:flex-end}
+.pfoot .cr span+span::before{content:"|";margin-right:clamp(12px,2.4vw,40px);opacity:.6}
+.tagc{position:absolute;right:0;top:0;z-index:5;font-weight:800;font-size:12px;letter-spacing:.12em}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1.2s var(--out),transform 1.2s var(--out);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- KONSEKRASI (scroll story) ---------- */
+.cons{position:relative;height:420vh;background:#12060a}
+.cpin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;color:#EFE6D5;background:radial-gradient(70% 60% at 50% 45%,#1d1310,#12060a 70%)}
+.rays{position:absolute;z-index:3;mix-blend-mode:screen;left:0;top:0;width:10px;height:10px;border-radius:50%;opacity:0;pointer-events:none;background:repeating-conic-gradient(from 0deg,rgba(255,232,180,.1) 0 2deg,transparent 3.5deg 9deg);-webkit-mask:radial-gradient(closest-side,#000 5%,rgba(0,0,0,.4) 30%,transparent 62%);mask:radial-gradient(closest-side,#000 5%,rgba(0,0,0,.4) 30%,transparent 62%);animation:spin 90s linear infinite;will-change:opacity,transform}
+.paint{position:absolute;z-index:2;left:0;top:0;will-change:transform}
+.paint::after{content:"";position:absolute;inset:-2px;z-index:5;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,transparent 58%,#1a0709 100%);opacity:var(--v,0)}
+.shard{position:absolute;inset:0;background-size:100% 100%;will-change:transform,opacity;}
+.arms{position:absolute;z-index:3;will-change:transform}
+.arms img{width:100%;height:100%;display:block}
+.hostx{position:absolute;z-index:4;border-radius:50%;opacity:0;will-change:transform,opacity}
+
+.hostx::after{content:"";position:absolute;inset:-60%;border-radius:50%;background:radial-gradient(closest-side,rgba(255,240,205,.85),rgba(255,226,160,.25) 55%,transparent);z-index:-1;opacity:var(--g,0)}
+.cveil{position:absolute;inset:0;z-index:2;background:#12060a;opacity:0;pointer-events:none}
+.ctext{position:absolute;z-index:7;left:0;right:0;text-align:center;padding:0 20px;pointer-events:none;will-change:opacity,transform}
+.ct0{bottom:clamp(28px,6vh,60px)}
+.ct0 .k,.ct2 .k{font-size:11px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.ct0 h2{margin:6px 0 0;font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(48px,7vw,104px);line-height:1;}
+.ct0 p{margin:10px 0 0;font-family:"Playfair Display",serif;font-style:italic;font-size:15px;color:#cdbfa8;}
+.ct1{top:clamp(80px,13vh,130px)}
+.ct1 .lat{margin:0;font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(32px,5vw,72px);line-height:1.05;color:#fff4dc;}
+.ct1 .id{margin:12px 0 0;font-size:13px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-hi);}
+.ct2{bottom:clamp(26px,6vh,60px)}
+.ct2 .ch{display:block;width:clamp(110px,12vw,170px);margin:0 auto 8px;}
+.ct2 h3{margin:4px 0 0;font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(42px,6vw,90px);line-height:1;color:#fff4dc;}
+.ct2 h3 em{color:var(--gold-hi)}
+.ct2 p{margin:12px auto 0;max-width:520px;font-size:14px;line-height:1.7;color:#EFE6D5;}
+.cpin .shade{position:absolute;z-index:6;left:0;right:0;bottom:0;height:50%;background:linear-gradient(transparent,rgba(10,6,5,.95));opacity:0;pointer-events:none}
+.cbar{position:absolute;z-index:8;left:50%;bottom:14px;width:120px;height:1px;margin-left:-60px;background:rgba(239,230,213,.2)}
+.cbar i{display:block;height:100%;width:0;background:var(--gold)}
+/* ---------- KATEDRAL (pop-up 3D) ---------- */
+.s3{position:relative;overflow:hidden;padding:clamp(80px,9vw,120px) 0 clamp(70px,8vw,110px);color:var(--ink);background:radial-gradient(120% 80% at 50% 35%,transparent 45%,rgba(90,60,30,.3)),var(--crumple) center/700px,#EFE6D5;background-blend-mode:normal,multiply,normal}
+.curtain{position:absolute;top:0;z-index:0;height:clamp(420px,56vw,820px);width:auto;mix-blend-mode:multiply;opacity:.92;pointer-events:none}
+.curtain.l{left:0}.curtain.r{right:0;transform:scaleX(-1)}
+.ktitle{position:relative;z-index:1;margin:0;text-align:center;line-height:.8}
+.ktitle .sc{display:block;font-family:"Pinyon Script",cursive;font-weight:400;font-size:clamp(34px,4.4vw,62px);color:var(--maroon);line-height:1.1}
+.ktitle .big{display:block;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(84px,17vw,250px);letter-spacing:.01em;color:#1d1512}
+.stage{position:relative;z-index:2;width:min(96vw,1100px);height:clamp(300px,40vw,520px);margin:calc(clamp(84px,17vw,250px)*-.3) auto 0;perspective:1500px;touch-action:pan-y}
+.chs{position:absolute;inset:0}
+.chu{position:absolute;left:50%;bottom:0;transform-origin:50% 100%;transition:transform 1.15s var(--ease),opacity .9s var(--out),width 1.15s var(--ease),height 1.15s var(--ease);cursor:pointer;perspective:1200px}
+.chu .ci{width:100%;height:100%;transform-origin:50% 100%}
+.chu img{width:100%;height:100%;display:block;object-fit:contain}
+.chu .fb::after{background:radial-gradient(closest-side,rgba(74,21,27,.25),transparent);color:var(--maroon)}
+.chu.feather img{object-fit:cover;mix-blend-mode:multiply;filter:sepia(.25) contrast(1.05);-webkit-mask:radial-gradient(closest-side,#000 58%,transparent 100%);mask:radial-gradient(closest-side,#000 58%,transparent 100%)}
+.chu.up .ci{animation:popup 1.25s cubic-bezier(.2,1.25,.35,1) both}
+@keyframes popup{0%{transform:rotateX(-88deg);opacity:0}25%{opacity:1}100%{transform:rotateX(0)}}
+.knav{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:14px;max-width:1040px;margin:30px auto 0;padding:0 16px}
+.knames{display:flex;flex-wrap:wrap;justify-content:center;gap:0 14px}
+.knames button{position:relative;padding:12px 2px;font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#7a6656;transition:color .4s}
+.knames button::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:1.5px;background:var(--maroon);transform:scaleX(0);transition:transform .6s var(--out)}
+.knames button[aria-current=true]{color:var(--maroon)}.knames button[aria-current=true]::after{transform:none}
+.rbtn{flex:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--maroon);display:grid;place-items:center;color:var(--maroon);transition:background .4s,color .4s}
+.rbtn:hover{background:var(--maroon);color:var(--royal)}
+.rbtn svg{width:18px;height:18px}
+.kinfo{position:relative;z-index:2;max-width:1100px;margin:46px auto 0;padding:0 max(4vw,16px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);gap:clamp(24px,4vw,64px)}
+.kinfo .ln{overflow:hidden}
+.kinfo .ln>*{transform:translateY(105%);opacity:0;transition:transform 1s var(--out),opacity 1s var(--out);transition-delay:var(--d,0s)}
+.kinfo.show .ln>*{transform:none;opacity:1}
+.kinfo h4{margin:0;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(36px,4.4vw,60px);line-height:.95;text-transform:uppercase;color:#1d1512}
+.kinfo .city{margin:6px 0 18px;font-size:clamp(26px,3vw,36px);line-height:1.1;color:var(--maroon)}
+.mrow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 20px;border-top:1.5px solid #2b201a;padding-top:14px}
+.mrow dt{font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--maroon)}
+.mrow dd{margin:2px 0 0;font-size:14px;font-weight:500;line-height:1.4}
+.kinfo p{margin:0 0 14px;font-size:15px}
+.kinfo ul,.vpanel ul{margin:0;padding:0;list-style:none}
+.kinfo li{position:relative;padding:8px 0 8px 24px;border-top:1px solid rgba(43,32,26,.22);font-size:14px}
+.kinfo li::before,.vpanel li::before{content:"—";position:absolute;left:0;color:var(--maroon)}
+
+/* ---------- LUKISAN (editorial) ---------- */
+.s2{position:relative;overflow:hidden;background:#4A151B;color:#EFE6D5;padding:clamp(90px,10vw,140px) 0 clamp(80px,9vw,120px)}
+.fresco{position:absolute;right:0;top:0;width:clamp(230px,34vw,520px);opacity:.88;-webkit-mask:linear-gradient(205deg,#000 35%,transparent 82%);mask:linear-gradient(205deg,#000 35%,transparent 82%);pointer-events:none}
+.s2 .wrap{position:relative;max-width:1240px;margin:0 auto;padding:0 max(4vw,16px)}
+.kick{margin:0;font-family:"Playfair Display",serif;font-style:italic;font-size:16px;color:var(--gold)}
+.ed-h{margin:8px 0 0;font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(58px,8.6vw,130px);line-height:.92;letter-spacing:-.01em}
+.ed-h em{display:block;padding-left:1.1em;color:var(--gold-hi)}
+.lede{max-width:430px;margin:24px 0 0;font-size:14px;line-height:1.75;color:#c8baa3}
+.chrono{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:clamp(50px,6vw,84px)}
+.chrono button{display:block;text-align:left;padding:0 14px 0 0;color:inherit}
+.chrono .ci{aspect-ratio:3/4.1;overflow:hidden;background:#34100f}
+.chrono .ci img{width:100%;height:100%;object-fit:cover;filter:brightness(.88);transition:transform 1.4s var(--out),filter .8s}
+
+.chrono .cl{margin-top:16px;border-left:1px solid rgba(239,230,213,.35);padding:2px 0 6px 14px}
+.chrono h3{margin:0;font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(19px,1.8vw,24px);line-height:1.15}
+.chrono .per{display:block;margin-top:4px;font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.chrono p{margin:8px 0 0;font-size:13px;line-height:1.6;color:#c8baa3}
+.ed-sub{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin:clamp(70px,8vw,110px) 0 30px;padding-top:24px;border-top:1px solid rgba(239,230,213,.22)}
+.ed-sub h3{margin:0;font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(42px,5.4vw,76px);line-height:1}
+.ed-sub h3 em{color:var(--gold-hi)}
+.ed-sub p{margin:0;font-family:"Playfair Display",serif;font-style:italic;font-size:15px;color:#c8baa3;max-width:340px}
+.gal{columns:3 260px;column-gap:clamp(20px,2.6vw,38px)}
+.note{break-inside:avoid;margin:0 0 clamp(26px,3vw,40px);background:#E8D3AE;color:#2a1d16;padding:28px 26px}
+.note h4{margin:0 0 10px;font-family:"Playfair Display",serif;font-weight:400;font-size:28px;line-height:1.1}
+.note h4 em{color:var(--maroon)}
+.note p{margin:0;font-size:13.5px;line-height:1.7}
+.pc{break-inside:avoid;display:block;width:100%;margin:0 0 clamp(28px,3.2vw,44px);text-align:left;color:inherit}
+.pc .pimg{overflow:hidden;background:#34100f;}
+.pc .pimg img{width:100%;height:100%;object-fit:cover;filter:brightness(.93);transition:transform 1.4s var(--out),filter .8s}
+
+.pc .cap{margin:12px 0 0;font-family:"Playfair Display",serif;font-size:16px;line-height:1.35;transition:color .4s}
+.pc:hover .cap{color:var(--gold-hi)}
+.pc .cap span{display:block;margin-top:5px;font-family:Montserrat,sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+
+/* ---------- PAPACY & HISTORY (editorial, dark) ---------- */
+.ed{position:relative;overflow:hidden;background:#3A1217;color:#EFE6D5;padding:clamp(90px,10vw,140px) 0 clamp(80px,9vw,120px)}
+.ed .wrap{position:relative;max-width:1240px;margin:0 auto;padding:0 max(4vw,16px)}
+.num{display:flex;align-items:center;gap:14px;font-family:"Playfair Display",serif;font-size:15px;color:#cdbfa8}
+.num .o{width:46px;height:46px;border-radius:50%;border:1px solid rgba(239,230,213,.4);display:grid;place-items:center}
+.num .o svg{width:22px;height:22px}
+.num .l{width:56px;height:1px;background:rgba(239,230,213,.4)}
+.big-t{margin:10px 0 0;font-family:"Playfair Display",serif;font-weight:400;text-transform:uppercase;font-size:clamp(50px,7.4vw,112px);line-height:.92;letter-spacing:.005em;color:#EFE6D5}
+.it{position:relative;margin:28px 0 0;padding-top:22px;max-width:330px;font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(17px,1.6vw,20px);line-height:1.35;color:#EFE6D5}
+.it::before{content:"";position:absolute;left:0;top:0;width:54px;height:1px;background:rgba(239,230,213,.5)}
+.sm{margin:18px 0 0;max-width:300px;font-size:12.5px;line-height:1.7;font-weight:300;color:#bfb19b}
+.pap-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.2fr);gap:clamp(24px,5vw,80px);align-items:center}
+.pap-img{position:relative;height:clamp(420px,62vw,720px);overflow:hidden}
+.pap-img img{width:100%;height:100%;object-fit:cover;object-position:50% 46%;-webkit-mask:linear-gradient(90deg,#000 55%,transparent),linear-gradient(#000 70%,transparent);-webkit-mask-composite:source-in;mask:linear-gradient(90deg,#000 55%,transparent) intersect,linear-gradient(#000 70%,transparent);mask-composite:intersect}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:40px;max-width:560px;border-top:1px solid rgba(239,230,213,.2);padding-top:20px}
+.stats b{display:block;font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(30px,3.2vw,44px);line-height:1;color:var(--gold-hi)}
+.stats span{display:block;margin-top:6px;font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#bfb19b}
+.popes{margin-top:clamp(60px,8vw,110px)}
+.popes h3,.hist h3{margin:0 0 18px;font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(28px,3vw,40px)}
+.popes h3 em,.hist h3 em{color:var(--gold-hi)}
+.prow{display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1.5fr);gap:20px;align-items:baseline;padding:18px 0;border-top:1px solid rgba(239,230,213,.16)}
+.prow:last-child{border-bottom:1px solid rgba(239,230,213,.16)}
+.prow .y{font-size:11px;font-weight:600;letter-spacing:.16em;color:var(--gold)}
+.prow .n{font-family:"Playfair Display",serif;font-size:clamp(19px,1.8vw,24px);text-transform:uppercase;letter-spacing:.02em}
+.prow .d{font-family:"Playfair Display",serif;font-style:italic;font-size:15px;color:#cdbfa8;line-height:1.5}
+.prow.now .n{color:var(--gold-hi)}
+.hist{background:#4A151B}
+.hist-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);gap:clamp(24px,5vw,80px)}
+.hist-l{position:sticky;top:90px;align-self:start}
+.hist-l .jesus{display:block;width:min(100%,330px);margin-top:34px;opacity:.95;-webkit-mask:linear-gradient(#000 70%,transparent);mask:linear-gradient(#000 70%,transparent)}
+.ev{display:grid;grid-template-columns:clamp(110px,12vw,170px) minmax(0,1fr);gap:22px;padding:26px 0;border-top:1px solid rgba(239,230,213,.16)}
+.ev .yr{font-family:"Playfair Display",serif;font-size:clamp(34px,3.6vw,52px);line-height:1;color:var(--gold-hi)}
+.ev .yr small{display:block;margin-top:6px;font-family:Montserrat,sans-serif;font-size:10px;font-weight:600;letter-spacing:.2em;color:#9e907b}
+.ev h4{margin:0;font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(20px,2vw,26px);text-transform:uppercase;letter-spacing:.02em}
+.ev p{margin:8px 0 0;font-size:13.5px;line-height:1.7;color:#cdbfa8}
+.ev p.q{font-family:"Playfair Display",serif;font-style:italic;font-size:16px;color:#EFE6D5}
+@media(max-width:820px){.pap-grid,.hist-grid{grid-template-columns:minmax(0,1fr)}.pap-img{height:360px}.hist-l{position:relative;top:0}.hist-l .jesus{width:200px}.prow{grid-template-columns:minmax(0,1fr)}.prow .y{order:-1}.stats{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* ---------- fallback ---------- */
+[data-fb]{position:relative}
+.fb img{opacity:0}
+.fb::after{content:attr(data-fb);position:absolute;inset:0;display:grid;place-items:center;padding:10px;text-align:center;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-hi);background:radial-gradient(circle,#4A151B,#2A0A0E)}
+
+/* ---------- viewer ---------- */
+#viewer{position:fixed;inset:0;z-index:80;visibility:hidden;color:var(--royal)}
+#viewer.open{visibility:visible}
+.vbg{position:absolute;inset:0;opacity:0;transition:opacity .9s var(--out)}
+#viewer.open .vbg{opacity:1}
+.vstage{position:absolute;inset:0;overflow:hidden;touch-action:none;cursor:zoom-in}
+#viewer.zoomed .vstage{cursor:grab}#viewer.dragging .vstage{cursor:grabbing}
+.fly{position:absolute;transform-origin:0 0;will-change:transform}
+.fly .fr{position:absolute;inset:-8px;background:#2A0A0E;border:1px solid #5d5142;transition:opacity .5s}
+#viewer.zoomed .fly .fr{opacity:0}
+.fly .pic{position:absolute;inset:0}
+#vimg{width:100%;height:100%;object-fit:contain;transform-origin:50% 50%;transition:transform .45s var(--out);will-change:transform;user-select:none;-webkit-user-drag:none}
+#viewer.dragging #vimg,#viewer.pinch #vimg{transition:none}
+.vfb{position:absolute;inset:0;display:none;place-items:center;text-align:center;padding:20px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-hi);background:radial-gradient(circle,#4A151B,#2A0A0E)}
+.fly.err .vfb{display:grid}.fly.err #vimg{opacity:0}
+.vbar,.vtop{position:absolute;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px max(3vw,14px);opacity:0;transition:opacity .6s .3s,padding 1s var(--ease);z-index:5}
+#viewer.open .vbar,#viewer.open .vtop{opacity:1}
+@media(min-width:721px){#viewer.zoomed .vbar,#viewer.pinned .vbar,#viewer.zoomed .vtop,#viewer.pinned .vtop{padding-right:calc(min(420px,92vw) + 24px)}}
+.vtop{top:0;background:linear-gradient(rgba(26,7,10,.85),transparent)}
+.vbar{bottom:0;background:linear-gradient(transparent,rgba(26,7,10,.9))}
+.vtitle{font-family:Anton,sans-serif;font-size:clamp(20px,2.2vw,28px);line-height:1.05;text-transform:uppercase;color:var(--yellow)}
+.vtitle small{display:block;font-family:Montserrat,sans-serif;font-size:11px;letter-spacing:.2em;color:#d8cfbf;margin-top:4px}
+.vctrl{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.vlvl{font-weight:700;font-size:11px;letter-spacing:.14em;min-width:50px;text-align:center;color:var(--gold-hi)}
+.vbtn{width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold-hi);background:rgba(20,16,15,.6);transition:background .4s}
+.vbtn:hover{background:var(--maroon)}
+.vbtn svg{width:18px;height:18px}
+.vhint{position:absolute;left:50%;top:84px;transform:translateX(-50%);z-index:5;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#eadfca;background:rgba(74,21,27,.85);padding:8px 16px;white-space:nowrap;transition:opacity .6s}
+#viewer.zoomed .vhint,#viewer.pinned .vhint{opacity:0}
+.vpanel{position:absolute;z-index:4;top:0;right:0;bottom:0;width:min(420px,92vw);color:var(--ink);overflow-y:auto;padding:78px 28px 110px;transform:translateX(105%);transition:transform 1s var(--ease);border-left:4px solid var(--crimson)}
+#viewer.zoomed .vpanel,#viewer.pinned .vpanel{transform:none}
+.vpanel>*{opacity:0;transform:translateX(30px);transition:opacity .8s var(--out),transform .8s var(--out)}
+#viewer.zoomed .vpanel>*,#viewer.pinned .vpanel>*{opacity:1;transform:none;transition-delay:calc(.35s + var(--i,0)*.07s)}
+.vpanel .k{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--maroon)}
+.vpanel h3{margin:6px 0 16px;font-family:"Playfair Display",serif;font-weight:400;font-size:36px;line-height:1.05;color:var(--maroon)}
+.vpanel .mrow{border-block:1.5px solid #3a2f28;padding:14px 0;margin-bottom:16px}
+.vpanel .mrow dt{color:var(--maroon)}
+.vpanel p{margin:0 0 14px;font-size:14.5px}
+.vpanel h4{margin:20px 0 4px;font-weight:800;font-size:14px;text-transform:uppercase;color:var(--maroon)}
+.vpanel ul{margin:0;padding:0;list-style:none}
+.vpanel li{position:relative;padding:7px 0 7px 22px;border-top:1px solid rgba(58,47,40,.25);font-size:14px}
+
+.vpanel .src{font-size:12px;color:#5b4a3e;margin-top:18px}
+.vpanel .x{position:absolute;top:16px;right:16px;color:var(--maroon);background:none}
+
+/* ---------- footer ---------- */
+footer{position:relative;overflow:hidden;padding:56px max(4vw,16px) 34px;color:#d8cfbf}
+footer .seal{position:absolute;right:clamp(130px,16vw,230px);top:40px;width:clamp(60px,7vw,96px);transform:rotate(-12deg);}
+footer .lambbig{display:block;width:120px;margin:0 auto 18px;}
+footer .gc{position:absolute;bottom:0;width:clamp(110px,14vw,200px);opacity:.95;pointer-events:none}
+footer .gc.r{right:0}footer .gc.l{left:0;transform:scaleX(-1)}
+footer .goth{position:absolute;left:clamp(10px,2vw,30px);top:20px;height:calc(100% - 40px);width:auto;opacity:.18;pointer-events:none}
+.wipe .lambw{width:110px;margin-bottom:10px;opacity:0;transform:scale(.8);transition:opacity .5s,transform .8s var(--out)}
+.wipe.cover .lambw{opacity:1;transform:none;transition-delay:.2s}
+.wipe{grid-template-rows:auto auto;align-content:center;justify-items:center}
+.pcorner{position:absolute!important;top:0;right:0;width:120px;transform:scaleY(-1)!important;opacity:.55!important;pointer-events:none}.vpanel .x{z-index:2}
+footer .in{max-width:1240px;margin:0 auto;padding:0 clamp(70px,13vw,200px) 40px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+footer .big{font-size:clamp(32px,4.4vw,56px);color:#EFE6D5;line-height:1}
+footer p{margin:10px 0 0;max-width:560px;font-size:13px;font-weight:300;letter-spacing:.04em}
+footer small{font-weight:300;font-size:11px;letter-spacing:.26em;text-transform:uppercase}
+
+/* ================= v10 additions ================= */
+/* --- 3D reveal --- */
+.rv{opacity:0;transform:perspective(1300px) translateY(50px) rotateX(-16deg);transform-origin:50% 100%;transition:opacity 1.3s var(--out),transform 1.5s var(--out);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.pc.rv{transform:perspective(1300px) translateY(60px) rotateY(-24deg);transform-origin:0 50%}
+.pc.rv:nth-child(3n+1){transform:perspective(1300px) translateY(60px) rotateY(24deg);transform-origin:100% 50%}
+.pc.rv:nth-child(3n+2){transform:perspective(1300px) translateY(70px) rotateX(-20deg)}
+.pc.rv.in{transform:none}
+.chrono button.rv{transform:perspective(1300px) translateY(60px) rotateX(-22deg) rotateY(10deg)}
+.chrono button.rv.in{transform:none}
+[data-d3]{will-change:transform}
+
+/* --- doors wipe (3D) --- */
+.wipe{position:fixed;inset:0;z-index:90;pointer-events:none;perspective:1700px;visibility:hidden;transform:none!important;display:block!important}
+.wipe.cover,.wipe.leave{visibility:visible}
+.wd{position:absolute;top:0;bottom:0;width:50.5%;backface-visibility:hidden;transition:transform 1s var(--ease)}
+.wd.l{left:0;transform-origin:0 50%;transform:rotateY(-100deg)}
+.wd.r{right:0;transform-origin:100% 50%;transform:rotateY(100deg)}
+.wd::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,3,6,.5),transparent 45%)}
+.wd.r::after{background:linear-gradient(270deg,rgba(20,3,6,.5),transparent 45%)}
+.wipe.cover .wd{transform:none}
+.wipe.cover.leave .wd.l{transform:rotateY(-100deg)}
+.wipe.cover.leave .wd.r{transform:rotateY(100deg)}
+.wmid{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;color:var(--royal);opacity:0;transition:opacity .35s}
+.wipe.cover .wmid{opacity:1;transition-delay:.75s}
+.wipe.cover.leave .wmid{opacity:0;transition-delay:0s}
+.wmid .sw{font-size:clamp(40px,7vw,90px);opacity:1}
+.wmid .lambw{width:110px;margin-bottom:10px}
+
+/* --- hero --- */
+.mega{color:var(--parch)}
+.swline .dash{background:var(--gold)}
+.dove{position:absolute;z-index:6;right:-6%;top:34%;width:min(22%,260px);opacity:0;pointer-events:none;will-change:transform}
+.ready .dove{animation:dovefly 11s cubic-bezier(.45,.05,.4,1) 3s 1 both}
+@keyframes dovefly{0%{opacity:0;transform:translate(10%,30%) scale(.55) rotate(6deg)}12%{opacity:1}50%{transform:translate(-120%,-20%) scale(.9) rotate(-4deg)}88%{opacity:1}100%{opacity:0;transform:translate(-330%,-90%) scale(1.15) rotate(-10deg)}}
+.hands img{filter:none!important}
+@media(max-width:820px){.dove{width:34%;top:40%}}
+
+/* --- consecration: host shining --- */
+.rays{display:none}
+.hostx::after{inset:-90%;opacity:calc(var(--g,0)*1);background:radial-gradient(closest-side,rgba(255,244,214,.95),rgba(255,226,160,.38) 38%,rgba(255,210,130,.1) 62%,transparent);animation:hshine 3.2s ease-in-out infinite}
+@keyframes hshine{0%,100%{transform:scale(.8);filter:brightness(.9)}50%{transform:scale(1.22);filter:brightness(1.25)}}
+.ct2 .la{margin:14px auto 0;max-width:640px;font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(20px,2.3vw,30px);line-height:1.4;color:#fff4dc;}
+.ct2 .en{margin:10px auto 0;max-width:520px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-hi);}
+
+/* --- church extras --- */
+.sg{position:absolute;z-index:1;top:30%;width:clamp(120px,13vw,200px);mix-blend-mode:multiply;opacity:.9;pointer-events:none;display:none}
+.sg.l{left:1.6vw}.sg.r{right:1.6vw}
+@media(min-width:1380px){.sg{display:block}}
+.knav{max-width:1100px}
+.knames{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;gap:0 22px;scrollbar-width:none;scroll-behavior:smooth;-webkit-mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);padding:0 18px;min-width:0;flex:1}
+.knames::-webkit-scrollbar{display:none}
+.knames button{white-space:nowrap;flex:none}
+.rbtn{width:auto;height:auto;border:0;border-radius:0;display:block;font-family:Montserrat,sans-serif;font-weight:500;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--maroon);padding:12px 4px}
+.rbtn:hover{background:none;color:var(--maroon)}
+.rbtn svg{display:none}
+.ktitle .big{color:var(--maroon)}
+.kcount{display:block;margin-top:6px;font-family:"Playfair Display",serif;font-style:italic;font-size:15px;color:#7a5a4a;text-align:center}
+
+/* --- paintings opener --- */
+.s2{padding-top:0}
+.pop{position:relative;min-height:max(100svh,700px);display:grid;place-items:center;overflow:hidden;margin:0 calc(-1*max(4vw,16px))}
+.pop .pt{position:absolute;left:0;right:0;top:clamp(70px,11vh,120px);margin:0;text-align:center;font-family:"Playfair Display",serif;font-weight:400;text-transform:uppercase;font-size:clamp(54px,14.6vw,260px);line-height:.9;letter-spacing:.01em;color:var(--parch);z-index:1;white-space:nowrap}
+.pop .pt .c{display:inline-block;transform:translateY(40%) rotateX(-60deg);opacity:0;transform-origin:50% 100%;transition:transform 1.5s var(--out),opacity 1.2s var(--out);transition-delay:var(--d)}
+.pop.in .pt .c{transform:none;opacity:1}
+.pop .mary{position:relative;z-index:2;height:min(86svh,820px);margin-top:clamp(120px,22vh,230px);align-self:end;opacity:0;transform:translateY(60px) scale(.96);transition:opacity 1.6s var(--out) .5s,transform 2s var(--out) .5s}
+.pop.in .mary{opacity:1;transform:none}
+.pop .mary img{height:100%;width:auto}
+.pop .colm{position:absolute;bottom:0;height:76%;width:auto;z-index:0;opacity:.55;pointer-events:none;-webkit-mask:linear-gradient(transparent,#000 22%);mask:linear-gradient(transparent,#000 22%)}
+.pop .colm.l{left:clamp(0px,3vw,60px)}.pop .colm.r{right:clamp(0px,3vw,60px)}
+.pop .sr{position:absolute;z-index:3;left:max(4vw,16px);bottom:clamp(40px,12vh,120px);font-size:clamp(34px,5vw,76px);line-height:1;color:var(--parch)}
+.pop .sr small{display:block;margin-top:10px;font-family:Montserrat,sans-serif;font-weight:500;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-hi)}
+.pop .pr{position:absolute;z-index:3;right:max(4vw,16px);bottom:clamp(40px,12vh,120px);max-width:330px;text-align:right}
+.pop .pr h3{margin:0;font-family:"Playfair Display",serif;font-weight:400;font-style:italic;font-size:clamp(28px,3.4vw,50px);line-height:1.05;color:var(--gold-hi)}
+.pop .pr p{margin:14px 0 0;font-size:13.5px;line-height:1.75;color:#dcd0b8}
+.pop .kk{position:absolute;z-index:3;left:max(4vw,16px);top:clamp(80px,12vh,130px);margin:0;font-family:Montserrat,sans-serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-hi)}
+.pop .kk2{left:auto;right:max(4vw,16px)}
+@media(max-width:820px){.pop .pr{position:relative;right:auto;bottom:auto;max-width:none;text-align:center;padding:0 22px;order:3}.pop .sr{bottom:auto;top:38%;left:16px;font-size:34px}.pop{display:flex;flex-direction:column;align-items:center}.pop .mary{height:60svh;margin-top:130px}.pop .colm{display:none}.pop .pt{font-size:15vw}.pop .kk2{display:none}}
+
+/* --- viewer (text controls) --- */
+.vstage{cursor:default}
+#viewer.zoomed .vstage{cursor:default}
+.fly{transition:left .9s var(--ease),top .9s var(--ease),width .9s var(--ease),height .9s var(--ease)}
+.vtop{align-items:flex-start}
+.vtitle{font-family:"Playfair Display",serif;font-weight:400;text-transform:none;font-size:clamp(24px,2.6vw,38px);line-height:1.1;color:var(--parch)}
+.vtitle small{margin-top:6px;font-family:Montserrat,sans-serif;font-weight:500;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-hi)}
+.vtxt{font-family:Montserrat,sans-serif;font-weight:500;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-hi);padding:12px 4px}
+.vcount{font-family:"Playfair Display",serif;font-style:italic;font-size:16px;color:#dcd0b8;min-width:70px;text-align:center}
+.vbar{justify-content:space-between}
+.vbar .mid{display:flex;align-items:center;gap:clamp(14px,3vw,40px)}
+.vpanel{border:0!important;width:min(430px,92vw);padding:92px 34px 110px}
+.vpanel .k{font-family:Montserrat,sans-serif;font-weight:500}
+.vpanel h3{font-size:clamp(30px,3vw,42px)}
+#viewer.pinned .vpanel{transform:none}
+@media(min-width:721px){#viewer.pinned .vbar,#viewer.pinned .vtop{padding-right:calc(min(430px,92vw) + 24px)}}
+@media(max-width:720px){.vtxt{letter-spacing:.2em;font-size:11px}}
+
+/* --- papacy / history --- */
+.num .o{display:none}
+.num{gap:12px}
+.num .l{width:70px}
+.peter{position:relative;margin:0 0 clamp(70px,9vw,130px);padding:clamp(50px,7vw,100px) 0;text-align:center;overflow:hidden}
+.peter .pbg{position:absolute;left:50%;top:50%;width:min(1200px,130%);transform:translate(-50%,-50%);opacity:.3;filter:sepia(.5) saturate(.8) blur(.6px);-webkit-mask:radial-gradient(closest-side,#000 40%,transparent 100%);mask:radial-gradient(closest-side,#000 40%,transparent 100%);pointer-events:none}
+.peter blockquote{position:relative;margin:0 auto;max-width:900px;padding:0 20px}
+.peter .tp{display:block;font-size:clamp(40px,6vw,92px);line-height:1;color:var(--gold-hi);margin-bottom:22px}
+.peter .en{margin:0;font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(24px,3.2vw,44px);line-height:1.3;color:var(--parch)}
+.peter .la{margin:26px 0 0;font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(16px,1.7vw,22px);line-height:1.6;color:#dcd0b8}
+.peter figcaption{margin-top:26px;font-family:Montserrat,sans-serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-hi)}
+.ev .dv{width:74px;display:block;margin-top:14px;transform:rotate(-8deg)}
+.hist-l .jw{margin-top:34px}
+.rosediv{position:relative;height:0;z-index:5;pointer-events:none}
+.rosediv img{position:absolute;left:50%;top:0;width:clamp(150px,22vw,300px);margin:calc(clamp(150px,22vw,300px)/-2) 0 0 calc(clamp(150px,22vw,300px)/-2);will-change:transform}
+
+/* --- shared tint swaps --- */
+.s2{background:var(--wine)}
+.ed{background:#3A1217}
+.hist{background:var(--wine)}
+
+/* --- VESTMENTS --- */
+.vest{background:#3A1217}
+
+.vest .wrap{position:relative;max-width:1280px;margin:0 auto;padding:0 max(4vw,16px)}
+.vst-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:clamp(24px,5vw,80px);align-items:end}
+.vst-head .sm{max-width:none}
+.vst-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,4vw,70px);align-items:start;margin-top:clamp(40px,5vw,70px)}
+.vst-stage{position:sticky;top:70px}
+.vst-tabs{display:flex;flex-wrap:wrap;gap:4px clamp(16px,2.6vw,38px);margin-bottom:6px}
+.vst-tabs button,.vst-mode button{position:relative;font-family:Montserrat,sans-serif;font-weight:500;font-size:clamp(12px,1.1vw,14px);letter-spacing:.24em;text-transform:uppercase;color:#bfae92;padding:12px 0;transition:color .4s}
+.vst-tabs button::after,.vst-mode button::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:1.5px;background:var(--gold);transform:scaleX(0);transform-origin:0 50%;transition:transform .7s var(--out)}
+.vst-tabs button[aria-current=true],.vst-mode button[aria-current=true]{color:var(--gold-hi)}
+.vst-tabs button[aria-current=true]::after,.vst-mode button[aria-current=true]::after{transform:none}
+.vst-mode{display:flex;gap:clamp(16px,2.4vw,30px)}
+.vst-mode button{font-size:11px}
+.vst-view{position:relative;height:clamp(520px,66vh,760px);margin-top:4px}
+.vst-view .halo{position:absolute;left:50%;top:44%;width:min(86%,520px);transform:translate(-50%,-50%);opacity:.34;pointer-events:none;-webkit-mask:radial-gradient(closest-side,#000 55%,transparent 100%);mask:radial-gradient(closest-side,#000 55%,transparent 100%)}
+.vst-view .halo img{width:100%;animation:spin 220s linear infinite}
+#vcanvas{position:absolute;inset:0;cursor:grab;touch-action:pan-y}
+#vcanvas:active{cursor:grabbing}
+#vcanvas canvas{display:block;width:100%!important;height:100%!important}
+.vst-hint{margin:0;font-family:"Playfair Display",serif;font-style:italic;font-size:14px;color:#cdbfa6;text-align:center}
+.vst-info .rk{font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(38px,4.6vw,66px);line-height:1;text-transform:uppercase;color:var(--parch);margin:0}
+.vst-info .rl{margin:8px 0 0;font-size:clamp(20px,2vw,28px);color:var(--gold-hi)}
+.vst-info .rt{margin:16px 0 0;font-size:14px;line-height:1.8;color:#dcd0b8;max-width:520px}
+.gl{margin:26px 0 0;padding:0;list-style:none}
+.gl button{display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:baseline;gap:6px;width:100%;text-align:left;padding:13px 0;color:#dcd0b8;border-top:1px solid rgba(239,230,213,.14);transition:color .4s}
+.gl li:last-child button{border-bottom:1px solid rgba(239,230,213,.14)}
+.gl .no{font-family:Montserrat,sans-serif;font-size:12px;letter-spacing:.2em;color:var(--gold)}
+.gl .nm{font-family:"Playfair Display",serif;font-size:clamp(18px,1.7vw,23px)}
+.gl .lt{font-family:"Playfair Display",serif;font-style:italic;font-size:14px;color:#a99a82}
+.gl button[aria-current=true]{color:var(--gold-hi)}
+.gm{min-height:190px;margin-top:22px;padding:22px 0 0;position:relative}
+.gm .gk{font-family:Montserrat,sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.gm h4{margin:6px 0 0;font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(26px,2.6vw,36px);color:var(--parch)}
+.gm h4 em{font-size:.6em;color:var(--gold-hi);margin-left:8px}
+.gm p{margin:12px 0 0;font-size:14px;line-height:1.8;color:#dcd0b8}
+.gm .sym{margin-top:14px;font-family:"Playfair Display",serif;font-style:italic;font-size:16px;color:var(--gold-hi);line-height:1.5}
+.gm .wb{margin-top:12px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#bfae92}
+.gm>*{animation:gmin .8s var(--out) both}
+@keyframes gmin{from{opacity:0;transform:translateY(14px)}}
+.swatches{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px;align-items:center}
+.swatches .lbl{width:100%;font-family:Montserrat,sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#bfae92}
+.swatches button{width:34px;height:34px;border-radius:50%;background:var(--c);position:relative;transition:transform .5s var(--out)}
+.swatches button[aria-current=true]{transform:scale(1.35)}
+.swatches button[aria-disabled=true]{opacity:.25;pointer-events:none}
+.swname{width:100%;font-family:"Playfair Display",serif;font-style:italic;font-size:15px;color:var(--gold-hi)}
+.vst-sec{margin-top:clamp(80px,10vw,140px)}
+.vst-sec>h3{margin:0 0 8px;font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(32px,4vw,56px);color:var(--parch)}
+.vst-sec>h3 em{color:var(--gold-hi)}
+.vst-sec>p.lead{margin:0 0 34px;max-width:620px;font-size:14px;line-height:1.8;color:#cdbfa6}
+.lcs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(12px,1.6vw,24px)}
+.lc .sw1{position:relative;aspect-ratio:3/4;background:var(--c);overflow:hidden}
+.lc .sw1::before{content:"";position:absolute;inset:0;background:var(--crumple) center/420px;mix-blend-mode:multiply;opacity:.45}
+.lc .sw1 img{position:absolute;left:50%;bottom:0;width:70%;transform:translateX(-50%)}
+.lc h4{margin:14px 0 2px;font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(19px,1.8vw,25px);color:var(--parch)}
+.lc .wn{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi);line-height:1.5}
+.lc p{margin:8px 0 0;font-size:12.5px;line-height:1.65;color:#cdbfa6}
+.rk4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(18px,2.4vw,40px)}
+.rk4>div{padding-top:18px;border-top:1px solid rgba(239,230,213,.2)}
+.rk4 h4{margin:0;font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(24px,2.4vw,34px);text-transform:uppercase;color:var(--parch)}
+.rk4 .lat{font-family:"Playfair Display",serif;font-style:italic;color:var(--gold-hi);font-size:15px}
+.rk4 dl{margin:16px 0 0}.rk4 dt{margin-top:14px;font-family:Montserrat,sans-serif;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.rk4 dd{margin:3px 0 0;font-size:13px;line-height:1.65;color:#dcd0b8}
+.vows{position:relative;margin-top:clamp(80px,10vw,140px);text-align:center;padding:30px 0}
+.vows .la{font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(22px,2.8vw,38px);line-height:1.4;color:var(--parch);max-width:860px;margin:0 auto}
+.vows .en{margin:16px auto 0;max-width:640px;font-size:13px;line-height:1.8;letter-spacing:.04em;color:#cdbfa6}
+.vows .cap{margin-top:18px;font-family:Montserrat,sans-serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-hi)}
+@media(max-width:1000px){.lcs{grid-template-columns:repeat(3,minmax(0,1fr))}.rk4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:860px){.vst-head,.vst-grid{grid-template-columns:minmax(0,1fr)}.vst-stage{position:relative;top:0}.vst-view{height:min(120vw,560px)}.lcs{grid-template-columns:repeat(2,minmax(0,1fr))}.rk4{grid-template-columns:minmax(0,1fr)}}
+
+/* --- FOOTER scene --- */
+footer{padding:0;background:var(--wine-dd) var(--leather) 0 0/420px;background-blend-mode:multiply;overflow:hidden}
+footer .seal,footer .lambbig,footer .goth,footer .gc{display:none}
+.fscene{position:relative;width:min(1100px,100%);margin:0 auto;height:clamp(470px,60vw,720px);padding-top:clamp(40px,6vw,80px);perspective:1400px}
+.fscene .arch{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:clamp(240px,38vw,420px);aspect-ratio:779/1200;z-index:3}
+.fscene .arch>*{position:absolute}
+.fscene .rose{left:50%;top:4%;width:158%;transform:translateX(-50%);z-index:0;opacity:0;-webkit-mask:radial-gradient(closest-side,#000 62%,transparent 100%);mask:radial-gradient(closest-side,#000 62%,transparent 100%);transition:opacity 2.2s var(--out) .1s}
+.fscene .rose img{width:100%;animation:spin 260s linear infinite;filter:brightness(.78) saturate(.9)}
+.fscene .altar{left:25.2%;width:50.8%;bottom:19.3%;z-index:1;opacity:0;transform:translateY(40px) rotateX(24deg);transform-origin:50% 100%;transition:opacity 1.6s var(--out) .9s,transform 2s var(--out) .9s}
+.fscene .imam{left:32.6%;width:35%;bottom:19.3%;z-index:2;opacity:0;transform:translateY(120px);transition:opacity 1.4s var(--out) 1.5s,transform 2.2s var(--out) 1.5s}
+.fscene .frame{left:0;top:0;width:100%;z-index:3;opacity:0;transform:scale(1.12);transition:opacity 1.6s var(--out) .4s,transform 2.2s var(--out) .4s;filter:sepia(.55) brightness(1.1) contrast(.92)}
+.fscene .ang{position:absolute;z-index:4;bottom:8%;height:62%;width:auto;opacity:0;transition:opacity 1.6s var(--out),transform 2.4s var(--out);transform-origin:50% 0}
+.fscene .ang.l{left:2%;transform:translate(-80px,-60px) rotate(-6deg);transition-delay:1.9s}
+.fscene .ang.r{right:2%;transform:translate(80px,-60px) rotate(6deg);transition-delay:2.1s}
+.fscene .sgw{position:absolute;z-index:1;bottom:0;height:78%;width:auto;opacity:0;transform:translateY(60px);transition:opacity 1.8s var(--out) 1.2s,transform 2.2s var(--out) 1.2s;-webkit-mask:linear-gradient(transparent,#000 14%);mask:linear-gradient(transparent,#000 14%)}
+.fscene .sgw.l{left:-2%}.fscene .sgw.r{right:-2%}
+.fscene .em{position:absolute;z-index:4;opacity:0;transform:translateY(30px);transition:opacity 1.6s var(--out),transform 1.8s var(--out)}
+.fscene .em img{width:100%;animation:bob 7s ease-in-out infinite}
+.fscene .em.m1{left:19%;bottom:2%;width:clamp(36px,6vw,70px);transition-delay:2.6s}
+.fscene .em.m2{right:19%;bottom:2%;width:clamp(36px,6vw,70px);transition-delay:2.8s}
+.fscene .em.m3{left:7%;top:20%;width:clamp(50px,7vw,90px);transition-delay:3s}
+.fscene .em.m4{right:7%;top:18%;width:clamp(50px,8vw,100px);transition-delay:3.2s}
+.fscene.in .rose,.fscene.in .altar,.fscene.in .imam,.fscene.in .frame,.fscene.in .ang,.fscene.in .sgw,.fscene.in .em{opacity:1;transform:none}
+.fscene.in .ang.l{animation:swayl 7s ease-in-out 4.2s infinite}.fscene.in .ang.r{animation:swayr 7s ease-in-out 4.6s infinite}
+@keyframes swayl{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.8deg)}}
+@keyframes swayr{0%,100%{transform:rotate(1.6deg)}50%{transform:rotate(-1.8deg)}}
+.fscene .fdove{position:absolute;z-index:5;left:70%;top:6%;width:clamp(60px,9vw,120px);opacity:0}
+.fscene.in .fdove{animation:fdove 9s ease-in-out 3.4s 1 both}
+@keyframes fdove{0%{opacity:0;transform:translate(60%,40%) scale(.6)}15%{opacity:1}100%{opacity:1;transform:translate(-30%,-20%) scale(1)}}
+.fbody{position:relative;z-index:5;max-width:1240px;margin:0 auto;padding:clamp(30px,4vw,56px) max(4vw,16px) 34px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.8fr) minmax(0,.7fr);gap:clamp(24px,4vw,70px);align-items:start}
+.fbody .big{font-size:clamp(34px,4.4vw,58px);color:var(--parch);line-height:1}
+.fbody .lat{margin:8px 0 0;font-family:"Playfair Display",serif;font-style:italic;font-size:16px;color:var(--gold-hi)}
+.fbody p{margin:14px 0 0;max-width:520px;font-size:13px;font-weight:300;line-height:1.8;color:#dcd0b8}
+.fbody h5{margin:0 0 12px;font-family:Montserrat,sans-serif;font-weight:500;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.fbody ul{margin:0;padding:0;list-style:none}
+.fbody li a{display:inline-block;padding:7px 0;text-decoration:none;font-family:"Playfair Display",serif;font-size:17px;color:var(--parch)}
+.fstrip{position:relative;z-index:5;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;max-width:1240px;margin:0 auto;padding:12px max(4vw,16px) 30px;font-weight:300;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#cdbfa6}
+.fstrip .barcode{color:#cdbfa6}
+.femb{display:flex;justify-content:center;align-items:flex-end;gap:clamp(18px,4vw,60px);max-width:1100px;margin:0 auto;padding:0 16px;position:relative;z-index:5}
+.femb img{height:clamp(54px,8vw,96px);width:auto;opacity:.9}
+@media(max-width:860px){.fbody{grid-template-columns:minmax(0,1fr)}.fscene .rose{width:190%}.fscene .sgw{display:none}.fscene .ang{height:48%}}
+
+/* --- patch10 --- */
+[data-d3]{transform:perspective(1100px) rotateX(calc(var(--p,0)*7deg)) translateY(calc(var(--p,0)*30px))}
+.fly .fr{display:none}
+.pop{margin:0}
+.s2 .wrap{padding-top:clamp(60px,8vw,110px)}
+.vhint,.vbtn{display:none}
+.vtxt{background:none}
+.vpanel .vtxt.x{position:absolute;top:30px;right:34px;padding:6px 0;color:var(--maroon)}
+.vpanel{background:var(--parch)}
+.vows .vb{width:clamp(90px,10vw,140px);margin:0 auto 22px}
+.num .l{background:rgba(239,230,213,.4)}
+.sg{filter:none}
+.fscene .em.m1,.fscene .em.m2{bottom:2%}
+.wmid .lambw{opacity:1;transform:none}
+.knav{gap:6px}
+.rbtn{flex:none}
+.kcount{margin-top:0}
+
+
+@media(min-width:861px){.vst-head{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr)}}
+.vest .big-t{font-size:clamp(46px,6.2vw,108px)}
+.fscene .ang{height:58%}
+.fscene .ang.l{left:6%}.fscene .ang.r{right:6%}
+.fscene .frame{filter:sepia(.35) brightness(.92) contrast(1.02)}
+@media(max-width:720px){nav.top{padding-inline:8px}.links a{padding:12px 3px!important;letter-spacing:.03em!important;font-size:8.5px!important;white-space:nowrap}.pop .kk{display:none}.mark{display:none}.links{width:100%;justify-content:space-between}}
+@media(min-width:721px){#viewer.pinned .vtop,#viewer.pinned .vbar{right:min(430px,92vw);padding-right:max(3vw,14px)}}
+.vtxt:focus-visible{outline:0;text-decoration:underline;text-underline-offset:8px}
+.vst-view{perspective:1500px}
+.vst-view::before{content:"";position:absolute;left:50%;top:50%;width:min(100%,560px);aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(184,138,45,.26),rgba(184,138,45,.08) 60%,transparent);pointer-events:none}
+#vfig{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+#vfig img{max-height:96%;max-width:92%;width:auto;height:auto;object-fit:contain;transform-origin:50% 50%}
+.vst-mode{margin-bottom:14px}
+.gm{min-height:0;padding-top:6px}
+.gl{margin-top:24px}
+/* ---------- responsive ---------- */
+@media (max-width:900px){.curtain{opacity:.35}}
+@media (max-width:820px){
+  .s1{grid-template-columns:minmax(0,1fr)}
+  .side{display:none}
+  .mega{font-size:clamp(64px,21vw,200px)}
+  .swline{font-size:6.2vw!important;bottom:80px}.swline .dash{width:.6em;height:3px}
+  .cherubs{width:92%;bottom:150px}.sun{width:94vw;top:9%}.hands{width:100%;margin-top:11vh}.clouds{height:42%;bottom:60px}
+  .pfoot .barcode{display:none}.cl-side{display:none}.cl-top{width:130%;top:-4%}.cl-paint{width:46%;bottom:8%}.poster{min-height:calc(100svh - 100px)}
+  .pfoot{justify-content:center;text-align:center}.pfoot .cr{justify-content:center}
+  .kinfo{grid-template-columns:minmax(0,1fr)}
+  .knames{display:none}
+  .chrono{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:34px}
+  .fresco{opacity:.4}
+  footer .seal{right:16px;top:16px;width:56px}
+  .angel.a2{top:auto;bottom:38%;right:2%}.angel.a1{top:12%}
+}
+@media (max-width:720px){
+  .vpanel{top:auto;width:100%;max-height:62vh;transform:translateY(105%);border-left:0;border-top:4px solid var(--crimson);padding:56px 22px 100px}
+  .vhint{white-space:normal;width:86%;text-align:center}
+  .links{flex-wrap:nowrap}.links a{padding:12px 7px;letter-spacing:.14em}.mark span{display:none}
+  .stage{width:118vw;margin-left:-9vw}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01s!important;transition-delay:0s!important}}
+</style>
+</head>
+<body>
+
+<div class="wipe" id="wipe"><div class="wd l leather"></div><div class="wd r leather"></div><div class="wmid"><img class="lambw" data-a="lamb" alt=""><div class="sw" id="wipeTxt"></div></div></div>
+
+<nav class="top" id="nav">
+  <a class="mark" href="#beranda"><span>CATHOLIC CLASSIC</span></a>
+  <div class="links"><a href="#konsekrasi" data-t="Elevatio">Mass</a><a href="#katedral" data-t="Domus Dei">Church</a><a href="#maestro" data-t="Ars Sacra">Paintings</a><a href="#papacy" data-t="Tu es Petrus">Papacy</a><a href="#vestments" data-t="Vestes Sacrae">Vestments</a><a href="#history" data-t="Ecclesia">History</a></div>
+</nav>
+
+<!-- ============ SLIDE 1 / HERO ============ -->
+<header class="s1 leather" id="beranda">
+  <div class="side l" id="sideL"></div>
+  <div class="poster">
+    <div class="sun"><img data-a="sunburst" alt=""></div>
+    <h1 class="mega" id="mega" aria-label="Catholic"></h1>
+    <div class="hands" id="hands" role="button" tabindex="0" aria-label="Open The Creation of Adam"><img class="hl" data-a="handL" alt=""><img class="hr" data-a="handR" alt=""></div>
+    <img class="cl-top" data-a="cloudTop" alt=""><img class="cl-side l" data-a="cloudSide" alt=""><img class="cl-side r" data-a="cloudSide" alt=""><div class="clouds" id="clouds"></div><img class="cl-paint" data-a="cloudPaint" alt=""><img class="cl-paint l" data-a="cloudPaint" alt="">
+    <div class="cherubs"><img data-a="cherubs" alt=""></div>
+    <img class="dove" data-a="dove" alt="">
+    
+    <div class="swline sw"><span><b>C</b>hurches</span><i class="dash"></i><span><b>P</b>aintings</span><i class="dash"></i><span><b>M</b>asters</span></div>
+    <div class="pfoot">
+      <div class="barcode"><i></i><span>7 512943 780243</span></div>
+      <div class="cr"><span>CatholicClassic.com</span><span>Ars Sacra</span><span>MMXXVI</span></div>
+    </div>
+  </div>
+  <div class="side r" id="sideR"></div>
+</header>
+
+<!-- ============ KONSEKRASI ============ -->
+<section class="cons" id="konsekrasi" aria-label="Consecration">
+  <div class="cpin" id="cpin">
+    <div class="rays" id="rays"></div>
+    <div class="paint" id="paint" role="img" aria-label="A priest elevating the Host at the consecration"><div id="shards"></div><div class="arms" id="arms"><img data-a="arms" alt=""></div><div class="hostx" id="hostx"></div></div>
+    <div class="ctext ct0" id="ct0"><div class="k">II · Sacrificium Missae</div><h2>Consecration</h2><p>Scroll slowly into the holiest moment of the Mass</p></div>
+    <div class="ctext ct1" id="ct1"><p class="lat">Hoc est enim Corpus meum</p><p class="id">This is my Body, which will be given up for you</p></div>
+    <div class="ctext ct2" id="ct2"><img class="ch" data-a="cherubhead" alt=""><div class="k">Elevatio</div><h3>Mysterium <em>Fidei</em></h3><p class="la">Mortem tuam annuntiamus, Domine, et tuam resurrectionem confitemur, donec venias.</p><p class="en">We proclaim your Death, O Lord, and profess your Resurrection until you come again</p></div>
+    <div class="shade" id="cshade"></div><div class="cbar"><i id="cbar"></i></div>
+  </div>
+</section>
+
+<!-- ============ KATEDRAL ============ -->
+<section class="s3" id="katedral">
+  <img class="curtain l" data-a="halfarch" alt=""><img class="curtain r" data-a="halfarch" alt="">
+  <h2 class="ktitle rv"><span class="sc">Domus Dei</span><span class="big">CHURCH</span></h2>
+  <div class="stage rv" style="--d:.15s" id="stage"><div class="chs" id="chs"></div></div>
+  <div class="knav"><button class="rbtn" id="cprev" aria-label="Previous church">Prev</button><div class="knames" id="knames"></div><button class="rbtn" id="cnext" aria-label="Next church">Next</button></div>
+  <div class="kcount" id="kcount"></div>
+  <div class="kinfo" id="info" aria-live="polite"></div>
+</section>
+
+<!-- ============ LUKISAN ============ -->
+<section class="s2" id="maestro">
+  <div class="pop leather" id="pop">
+    <p class="kk">Pinacoteca</p><p class="kk kk2">Ars Sacra</p>
+    <h2 class="pt" id="ptitle" aria-label="Paintings"></h2>
+    <img class="colm l" data-a="column" alt=""><img class="colm r" data-a="column" alt="">
+    <div class="mary"><img data-a="salve" alt="Our Lady, detail"></div>
+    <div class="sr sw"><b>M</b>asters<small>Renaissance · Baroque</small></div>
+    <div class="pr"><h3>of the Masters</h3><p>From the Renaissance to the Baroque, the great painters turned the Gospel into light, colour and the human form. These works were made to be prayed before, not merely looked at.</p></div>
+  </div>
+  <div class="wrap">
+    <div class="chrono" id="chrono"></div>
+    <div class="ed-sub rv"><h3>The <em>Masterpieces</em></h3><p>Click a painting to open it. Its story slides in beside it.</p></div>
+    <div class="gal" id="gal"></div>
+  </div>
+</section>
+
+<!-- ============ PAPACY ============ -->
+<section class="ed" id="papacy">
+  <div class="wrap">
+    <div class="pap-grid">
+      <div class="pap-img rv"><img data-a="sistine" data-d3 alt="The Sistine Chapel ceiling"></div>
+      <div>
+        <div class="num rv"><span>04</span><span class="l"></span></div>
+        <h2 class="big-t rv" style="--d:.08s">The<br>Papacy</h2>
+        <p class="it rv" style="--d:.16s">From a fisherman of Galilee to the Bishop of Rome, an unbroken line of successors has guarded the faith for two thousand years.</p>
+        <p class="sm rv" style="--d:.24s">The Pope is the Bishop of Rome and the visible head of the Catholic Church. The crossed keys of gold and silver recall the keys of the Kingdom entrusted by Christ to Peter.</p>
+        <div class="stats rv" style="--d:.3s"><div><b>267</b><span>Popes</span></div><div><b>Leo XIV</b><span>Since May 2025</span></div><div><b>Rome</b><span>Holy See</span></div></div>
+      </div>
+    </div>
+    <div class="popes">
+      <h3 class="rv">Successors <em>of Peter</em></h3>
+      <div class="prow rv"><span class="y">c.30 – 64</span><span class="n">St Peter</span><span class="d">The fisherman of Galilee: “You are Peter, and on this rock I will build my Church.”</span></div><div class="prow rv"><span class="y">440 – 461</span><span class="n">St Leo I the Great</span><span class="d">Defended the faith at Chalcedon and met Attila to spare Rome.</span></div><div class="prow rv"><span class="y">590 – 604</span><span class="n">St Gregory I the Great</span><span class="d">Monk, reformer of the liturgy, sent missionaries to England; Gregorian chant bears his name.</span></div><div class="prow rv"><span class="y">1198 – 1216</span><span class="n">Innocent III</span><span class="d">Height of the medieval papacy; approved St Francis and called the Fourth Lateran Council.</span></div><div class="prow rv"><span class="y">1503 – 1513</span><span class="n">Julius II</span><span class="d">Laid the first stone of the new St Peter’s and commissioned Michelangelo’s Sistine ceiling.</span></div><div class="prow rv"><span class="y">1846 – 1878</span><span class="n">Bl. Pius IX</span><span class="d">Longest-reigning pope after Peter; convened the First Vatican Council.</span></div><div class="prow rv"><span class="y">1958 – 1963</span><span class="n">St John XXIII</span><span class="d">“Good Pope John”, who opened the Second Vatican Council.</span></div><div class="prow rv"><span class="y">1978 – 2005</span><span class="n">St John Paul II</span><span class="d">The Polish pope who travelled to 129 countries and helped bring down the Iron Curtain.</span></div><div class="prow rv"><span class="y">2005 – 2013</span><span class="n">Benedict XVI</span><span class="d">Theologian pope; the first to renounce the office in nearly six centuries.</span></div><div class="prow rv"><span class="y">2013 – 2025</span><span class="n">Francis</span><span class="d">The first pope from the Americas and the first Jesuit pope.</span></div><div class="prow rv now"><span class="y">2025 –</span><span class="n">Leo XIV</span><span class="d">Robert Francis Prevost of Chicago, an Augustinian, the 267th Bishop of Rome.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VESTMENTS ============ -->
+<section class="ed vest" id="vestments">
+  <div class="wrap">
+    <div class="vst-head">
+      <div>
+        <div class="num rv"><span>05</span><span class="l"></span></div>
+        <h2 class="big-t rv" style="--d:.08s">Sacred<br>Vestments</h2>
+      </div>
+      <div>
+        <p class="it rv" style="--d:.16s">Every garment of the liturgy has a meaning. Choose a garment and read why the Church clothes her ministers as she does.</p>
+        <p class="sm rv" style="--d:.24s">Twelve pieces, from the alb every minister wears to the mitre of the bishop and the white cassock of the Pope. Each one carries a meaning.</p>
+      </div>
+    </div>
+    <div class="vst-grid" id="vst">
+      <div class="vst-stage">
+        <div class="vst-view"><div id="vfig"><img id="vfimg" alt=""></div></div>
+        <p class="vst-hint" id="vcount"></p>
+      </div>
+      <div class="vst-info">
+        <div class="vst-mode"><button data-t="mass">Mass vestments</button><button data-t="dress">Cassocks &amp; dress</button></div>
+        <div class="gm" id="vgm"></div>
+        <ul class="gl" id="vgl"></ul>
+      </div>
+    </div>
+    <div class="vows rv">
+      <img class="vb" data-a="bible" alt="">
+      <p class="la">Tu es sacerdos in aeternum, secundum ordinem Melchisedech.</p>
+      <p class="en">“You are a priest forever, after the order of Melchizedek.” Psalm 110:4</p>
+      <div class="cap">Words of the rite of ordination</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HISTORY ============ -->
+<section class="ed hist" id="history">
+  <div class="wrap">
+    <figure class="peter rv"><img class="pbg" data-a="perugino" alt=""><blockquote><span class="tp sw"><b>T</b>u es Petrus</span><p class="en">“And I tell you, you are Peter, and on this rock I will build my church, and the gates of hell shall not prevail against it.”</p><p class="la">Et ego dico tibi, quia tu es Petrus, et super hanc petram aedificabo Ecclesiam meam, et portae inferi non praevalebunt adversum eam.</p></blockquote><figcaption>Matthew 16:18</figcaption></figure>
+    <div class="hist-grid">
+      <div class="hist-l">
+        <div class="num rv"><span>06</span><span class="l"></span></div>
+        <h2 class="big-t rv" style="--d:.08s">History<br>of the<br>Church</h2>
+        <p class="it rv" style="--d:.16s">Twenty centuries of saints, councils and storms, carried by one promise: “I am with you always.”</p>
+        <div class="jw"><img class="jesus rv" style="--d:.24s" data-a="jesus" data-d3 alt=""></div>
+      </div>
+      <div><div class="ev rv"><div class="yr">c.33<small>JERUSALEM</small></div><div><h4>Pentecost</h4><p>The Holy Spirit descends on the Apostles gathered with Mary. Peter preaches, and the Church is born.</p></div></div><div class="ev rv"><div class="yr">313<small>MILAN</small></div><div><h4>The Edict of Milan</h4><p>Emperor Constantine grants Christians freedom of worship; the age of the catacombs ends.</p></div></div><div class="ev rv"><div class="yr">325<small>NICAEA</small></div><div><h4>The First Ecumenical Council</h4><p>The bishops profess that the Son is “one in being with the Father”, the heart of the Nicene Creed.</p></div></div><div class="ev rv"><div class="yr">529<small>MONTE CASSINO</small></div><div><h4>St Benedict and the monasteries</h4><p>“Ora et labora”: monasteries keep learning, prayer and farming alive across a fractured Europe.</p></div></div><div class="ev rv"><div class="yr">1054<small>CONSTANTINOPLE</small></div><div><h4>The East–West Schism</h4><p>Rome and Constantinople break communion, dividing Latin and Greek Christianity.</p></div></div><div class="ev rv"><div class="yr">c.1210<small>ASSISI & TOULOUSE</small></div><div><h4>The Mendicant Friars</h4><p>St Francis and St Dominic found orders of poverty and preaching that renew the Church from within.</p></div></div><div class="ev rv"><div class="yr">1517<small>WITTENBERG</small></div><div><h4>The Reformation</h4><p>Martin Luther’s theses open a division that splits Western Christendom.</p></div></div><div class="ev rv"><div class="yr">1545 – 1563<small>TRENT</small></div><div><h4>The Council of Trent</h4><p>The Catholic Reformation clarifies doctrine, reforms the clergy and inspires the Baroque.</p></div></div><div class="ev rv"><div class="yr">1869 – 1870<small>ROME</small></div><div><h4>The First Vatican Council</h4><p>Defines papal infallibility before being suspended by the capture of Rome.</p></div></div><div class="ev rv"><div class="yr">1962 – 1965<small>ROME</small></div><div><h4>The Second Vatican Council</h4><p>Renews the liturgy and opens the Church to dialogue with the modern world.</p></div></div><div class="ev rv"><div class="yr">2025<small>ROME</small></div><div><h4>Jubilee of Hope</h4><p>A Holy Year of pilgrimage; in May the conclave elects Leo XIV, the first pope from the United States.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="leather" id="tentang">
+  <div class="fscene" id="fscene">
+    <div class="arch"><img class="altar" data-a="altar" alt=""><img class="imam" data-a="imam" alt=""><img class="frame" data-a="arch" alt=""></div>
+    <img class="ang l" data-a="ang1" alt=""><img class="ang r" data-a="ang2" alt="">
+  </div>
+  <div class="fbody">
+    <div><div class="big sw"><b>S</b>oli <b>D</b>eo <b>G</b>loria</div><p class="lat">Ad maiorem Dei gloriam</p><p>Catholic Classic celebrates the artistic heritage of the Church: architecture that lifts our eyes to heaven and paintings that proclaim the Gospel through light and colour. Paintings and church photographs are loaded from Wikimedia Commons; each image’s source and licence is listed in its description panel.</p></div>
+    <div><h5>Explore</h5><ul><li><a href="#konsekrasi" data-t="Elevatio">The Mass</a></li><li><a href="#katedral" data-t="Domus Dei">Churches</a></li><li><a href="#maestro" data-t="Ars Sacra">Paintings</a></li><li><a href="#papacy" data-t="Tu es Petrus">The Papacy</a></li></ul></div>
+    <div><h5>Learn</h5><ul><li><a href="#vestments" data-t="Vestes Sacrae">Vestments</a></li><li><a href="#history" data-t="Ecclesia">History</a></li><li><a href="#beranda" data-t="Catholic Classic">Back to top</a></li></ul></div>
+  </div>
+  <div class="fstrip"><div class="barcode"><i></i><span>CATHOLICCLASSIC.COM</span></div><span>Ars Sacra · MMXXVI</span><span>Mass | Church | Paintings | Papacy | Vestments | History</span></div>
+</footer>
+
+<!-- viewer -->
+<div id="viewer" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <div class="vbg leather"></div>
+  <div class="vstage" id="vstage"><div class="fly" id="vfly"><div class="pic"><img id="vimg" alt="" draggable="false"><div class="vfb" id="vfb"></div></div></div></div>
+  <div class="vtop"><div class="vtitle" id="vtitle"></div><div class="vctrl"><button class="vtxt" id="vinfo">Details</button><button class="vtxt" id="vclose">Close</button></div></div>
+  <aside class="vpanel paper" id="vpanel" aria-live="polite"></aside>
+  <div class="vbar"><button class="vtxt" id="vprev">Previous</button><div class="mid"><span class="vcount" id="vcount"></span></div><button class="vtxt" id="vnext">Next</button></div>
+</div>
+
+<script>
+{
+const SRC='https://commons.wikimedia.org/wiki/Special:FilePath/';
+const W=(it,w)=>it.local?A[it.local]:SRC+encodeURIComponent(it.file)+'?width='+Math.min(w,it.max||w);
+/*ASSETS*/
+const PAGE=it=>'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(it.file.replace(/ /g,'_'));
+const $=s=>document.querySelector(s);
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const imgEl=(it,w,lazy=true)=>`<img src="${W(it,w)}" alt="${esc(it.title)}" ${lazy?'loading="lazy"':''} decoding="async" onerror="this.parentNode.classList.add('fb')">`;
+const FLOUR=`<svg class="flour" viewBox="0 0 200 18" fill="none" stroke="currentColor" stroke-width="1"><path d="M10 9h70M120 9h70"/><path d="M80 9c6-8 14-8 20 0 6 8 14 8 20 0M80 9c6 8 14 8 20 0 6-8 14-8 20 0"/><circle cx="100" cy="9" r="2.4" fill="currentColor"/><path d="M10 9c-4-4-8-4-8 0s4 4 8 0M190 9c4-4 8-4 8 0s-4 4-8 0"/></svg>`;
+const STAR='<i class="star"></i>';
+
+const CAT=[
+{title:"St. Peter's Basilica",city:'Vatican City',local:'peterC',file:'Basilica_Sancti_Petri.jpg',max:6000,ratio:.68,
+ meta:[['Location','Vatican City'],['Built','1506 – 1626'],['Style','Renaissance & Baroque'],['Architects','Bramante, Michelangelo, Maderno, Bernini']],
+ desc:'Raised over the tomb of Saint Peter, the first Apostle and first Pope, the basilica is the heart of the worldwide Catholic Church. Its construction spanned more than a century and gathered the greatest minds of the Renaissance. Michelangelo’s dome crowns the skyline of Rome.',
+ notes:['Michelangelo’s dome rises about 136 metres from the floor to the top of the cross.','Bernini’s bronze baldachin stands over the high altar, directly above Peter’s tomb.','Michelangelo’s Pietà, the only work he ever signed, rests in the first chapel on the right.','Consecrated by Pope Urban VIII on 18 November 1626.']},
+{title:'Notre-Dame de Paris',city:'Paris, France',local:'notreC',file:'NotreDameDeParis.jpg',max:2865,ratio:.64,
+ meta:[['Location','Île de la Cité, Paris'],['Built','1163 – c.1345'],['Style','French Gothic'],['Dedicated to','Our Lady']],
+ desc:'“Our Lady of Paris” is a Gothic masterpiece of twin towers, immense rose windows and graceful flying buttresses. After the devastating fire of 15 April 2019 the cathedral was restored and reopened to the faithful in December 2024.',
+ notes:['Its three 13th-century rose windows are among the most celebrated stained glass in the world.','The Gallery of Kings on the west front shows 28 kings of Judah and Israel.','The twin towers rise 69 metres.','The Crown of Thorns, venerated as a relic, was saved from the 2019 fire.']},
+{title:'Jakarta Cathedral',city:'Jakarta, Indonesia',local:'jakartaC',file:'Katedral_Jakarta.jpg',max:1536,ratio:.79,
+ meta:[['Official name','Our Lady of the Assumption'],['Blessed','21 April 1901'],['Style','Neo-Gothic'],['Architects','A. Dijkmans, M.J. Hulswit']],
+ desc:'The cathedral of the Archdiocese of Jakarta is one of Indonesia’s great colonial-era landmarks. It faces the Istiqlal Mosque across the street, and together they stand as a symbol of religious harmony in the heart of the capital.',
+ notes:['Its three spires are named the Tower of David, the Ivory Tower and the Angelus Tower.','The twin front spires rise about 60 metres.','The upper floor houses the Cathedral Museum of Church history in Indonesia.','A statue of Our Lady on the façade welcomes every pilgrim.']},
+{title:'Florence Cathedral',city:'Florence, Italy',local: 'cFlo', feather: 1, file:'Santa_Maria_del_Fiore_Cathedral_Florence_04_2024_0779.jpg',max:1400,ratio:1.494,
+ meta:[['Location','Piazza del Duomo, Florence'],['Built','1296 – 1436'],['Style','Italian Gothic & Early Renaissance'],['Architects','Arnolfo di Cambio, Brunelleschi']],
+ desc:'Santa Maria del Fiore is the birthplace of Renaissance architecture. Filippo Brunelleschi raised its enormous dome without centring scaffolds from the ground, an engineering feat that astonished the world. The white, green and pink marble façade seen today was only completed in 1887.',
+ notes:['Brunelleschi’s dome (1420–1436) is still the largest brick dome ever built.','Consecrated by Pope Eugene IV in 1436.','Inside, the dome is painted with the Last Judgement by Vasari and Zuccari.','Giotto’s bell tower stands beside the cathedral.']},
+{title:'Milan Cathedral',city:'Milan, Italy',local: 'cMil', feather: 1, file:'Facciata_del_duomo_di_Milano_di_notte.JPG',max:399,ratio:0.796,
+ meta:[['Location','Piazza del Duomo, Milan'],['Built','1386 – 1965'],['Style','Gothic'],['Dedicated to','Nativity of the Virgin Mary']],
+ desc:'It took almost six centuries to complete this marble cathedral. A forest of spires and thousands of statues make it look like lace carved in stone. On the highest spire stands the Madonnina, the gilded statue of Our Lady that became the emblem of Milan.',
+ notes:['Adorned with about 3,400 statues and 135 spires.','The façade was only finished in the early 19th century, at Napoleon’s order.','The golden Madonnina was raised in 1774.','Visitors can walk across the marble roof among the spires.']},
+{title:'Cologne Cathedral',city:'Cologne, Germany',file:'Kölner_Dom_-_Westfassade_2022_ohne_Gerüst-0968.jpg',max:3062,ratio:.616,
+ meta:[['Location','Cologne, North Rhine-Westphalia'],['Built','1248 – 1880'],['Style','High Gothic'],['Status','UNESCO World Heritage (1996)']],
+ desc:'The Kölner Dom was built to house the relics of the Three Kings. Construction stalled for centuries and was only completed in 1880, following the original medieval plans. Its 157-metre twin spires dominate the banks of the Rhine.',
+ notes:['The golden Shrine of the Three Kings behind the altar is the largest reliquary in the Western world.','The original 14th-century façade drawing survived and guided the 19th-century completion.','It survived the bombing of World War II despite many direct hits.','One of the largest Gothic churches in Northern Europe.']},
+{title:'Sagrada Família',city:'Barcelona, Spain',local: 'cSag', feather: 1, file:'Sagrada_familia_BCN_01.jpg',max:1400,ratio:1.77,
+ meta:[['Location','Barcelona, Catalonia'],['Begun','1882'],['Style','Catalan Modernism'],['Architect','Antoni Gaudí']],
+ desc:'The Basilica of the Holy Family is Antoni Gaudí’s hymn in stone; he devoted more than four decades of his life to it. Its forms are drawn from nature: the columns branch like trees, and light from the stained glass flows like a forest at dusk.',
+ notes:['Gaudí led the project from 1883 until his death in 1926.','Consecrated as a minor basilica by Pope Benedict XVI on 7 November 2010.','Its three façades tell of Christ’s Nativity, Passion and Glory.','The Tower of Jesus Christ is designed to rise 172.5 metres.']},
+{title:'Chartres Cathedral',city:'Chartres, France',file:'Chartres_cathedral_(West_façade).jpg',max:2000,ratio:.857,
+ meta:[['Location','Chartres, Eure-et-Loir'],['Built','Mostly 1194 – c.1220'],['Style','High Gothic'],['Status','UNESCO World Heritage (1979)']],
+ desc:'Chartres is the best-preserved Gothic cathedral of the Middle Ages. Rebuilt swiftly after the fire of 1194, it keeps an extraordinary treasury of 12th- and 13th-century stained glass, famous for its “Chartres blue”.',
+ notes:['It keeps the Sancta Camisia, venerated as the veil of the Virgin Mary.','The labyrinth in the nave floor was walked by pilgrims as a prayer.','Its two façade towers differ in style: Romanesque and Flamboyant Gothic.','More than 150 original stained-glass windows survive.']}
+,
+{"title": "Seville Cathedral", "short": "Seville", "city": "Seville, Spain", "file": "Cathedral with Giralda Tower - Seville - Spain.jpg", "max": 2304, "ratio": 0.667, "meta": [["Location", "Seville, Andalusia"], ["Built", "1401 – 1506"], ["Style", "Gothic with Moorish and Renaissance elements"], ["Status", "UNESCO World Heritage (1987)"]], "desc": "The Cathedral of Saint Mary of the See is among the largest churches in the world and the largest Gothic cathedral by volume. It was raised on the site of the city’s great mosque, and the Giralda, once its minaret, was kept as the bell tower.", "notes": ["The Giralda was built as a minaret in 1184–1198 and crowned with a Renaissance belfry in the 16th century.", "The Orange Tree Courtyard preserves the old mosque’s ablution court.", "A monumental tomb said to hold the remains of Christopher Columbus stands inside.", "The Capilla Mayor holds one of the largest altarpieces in Christendom."]},
+{"title": "Sacré-Cœur Basilica", "short": "Sacré-Cœur", "city": "Paris, France", "local": 'cSac', "feather": 1, "file": "Basilique du Sacré-Cœur de Montmartre, Sacred Heart of Paris 7.JPG", "max": 1400, "ratio": 0.887, "meta": [["Location", "Montmartre, Paris"], ["Built", "1875 – 1914"], ["Style", "Romano-Byzantine"], ["Architect", "Paul Abadie"]], "desc": "The Basilica of the Sacred Heart crowns the hill of Montmartre, the highest point of Paris. Raised as an act of national penance after the war of 1870, it was consecrated in 1919. Its white domes glow above the city, and Eucharistic adoration has gone on there day and night since 1885.", "notes": ["Its white travertine is self-cleaning and keeps its pale colour with age.", "The great bell, the Savoyarde, is among the heaviest in the world.", "The apse mosaic of Christ in Majesty is one of the largest in France.", "The dome offers one of the widest views over Paris."]},
+{"title": "Santiago de Compostela Cathedral", "short": "Santiago", "city": "Santiago de Compostela, Spain", "file": "Obradoiro facade - Cathedral of Santiago de Compostela (6).JPG", "max": 3371, "ratio": 0.66, "meta": [["Location", "Galicia, Spain"], ["Begun", "1075"], ["Style", "Romanesque, with a Baroque façade"], ["Shrine of", "St James the Apostle"]], "desc": "Pilgrims from every country walk the Camino de Santiago to reach this cathedral, built over the tomb venerated as that of the Apostle James. The Romanesque church hides behind the Baroque Obradoiro façade, which glows gold in the evening sun.", "notes": ["The Obradoiro façade was raised in the 18th century by Fernando de Casas Novoa.", "The Botafumeiro, a giant swinging censer, is lit on great feasts.", "Pilgrims embrace the statue of St James above the high altar.", "The Portico of Glory is a masterpiece of Romanesque sculpture."]},
+{"title": "Reims Cathedral", "short": "Reims", "city": "Reims, France", "file": "Facade of Reims Cathedral.jpg", "max": 3648, "ratio": 0.667, "meta": [["Location", "Reims, Champagne"], ["Built", "1211 – c.1275"], ["Style", "High Gothic"], ["Role", "Coronation church of French kings"]], "desc": "Notre-Dame de Reims is the cathedral where the kings of France were crowned, in a line recalled from the baptism of Clovis by Saint Remigius. Its façade holds more than two thousand statues, among them the famous Smiling Angel.", "notes": ["It was badly damaged by shelling in the First World War and restored over the following decades.", "Marc Chagall designed windows for the axial chapel in 1974.", "The Smiling Angel is among the best-loved Gothic sculptures.", "Joan of Arc stood beside Charles VII here at his coronation in 1429."]},
+{"title": "St. Stephen’s Cathedral", "short": "Vienna", "city": "Vienna, Austria", "local": 'cSte', "feather": 1, "file": "Cattedrale di Santo Stefano - Vienna (Stephansdom).jpg", "max": 1400, "ratio": 1.394, "meta": [["Location", "Stephansplatz, Vienna"], ["Begun", "1137"], ["Style", "Romanesque and Gothic"], ["Length", "About 107 metres"]], "desc": "The Stephansdom is the spiritual heart of Vienna. Its roof, tiled in zigzag patterns of many colours, and the slender south tower known as the “Steffl” are among the most recognisable sights of Central Europe.", "notes": ["The south tower rises about 136 metres.", "The Pummerin, the great bell, rings in the New Year over the city.", "The cathedral was badly damaged by fire in 1945 and restored with public donations.", "The catacombs hold the funeral urns of the Habsburgs’ hearts and entrails."]},
+{"title": "St. Vitus Cathedral", "short": "Prague", "city": "Prague, Czechia", "file": "St. Vitus Cathedral in Prague 2016.jpg", "max": 1666, "ratio": 1.778, "meta": [["Location", "Prague Castle"], ["Built", "1344 – 1929"], ["Style", "Gothic and Neo-Gothic"], ["Architects", "Matthias of Arras, Peter Parler, Josef Mocker"]], "desc": "The Metropolitan Cathedral of Saints Vitus, Wenceslaus and Adalbert rises inside Prague Castle. Work began in 1344 and was only finished in 1929, nearly six centuries later. It holds the chapel of Saint Wenceslas and the Bohemian crown jewels.", "notes": ["The Golden Gate on the south side is a rare 14th-century mosaic.", "The Chapel of Saint Wenceslas is set with semi-precious stones and frescoes.", "The silver tomb of Saint John of Nepomuk stands inside.", "Alfons Mucha designed one of its stained-glass windows."]},
+{"title": "St. Patrick’s Cathedral", "short": "New York", "city": "New York, USA", "local": 'cPat', "feather": 1, "file": "St Patrick's Cathedral - New York City.jpg", "max": 1400, "ratio": 1.6, "meta": [["Location", "Fifth Avenue, Manhattan"], ["Built", "1858 – 1879"], ["Style", "Neo-Gothic"], ["Architect", "James Renwick Jr."]], "desc": "Standing among the skyscrapers of Fifth Avenue, St. Patrick’s is the seat of the Archdiocese of New York. Its marble towers and pointed windows were modelled on the great cathedrals of Europe, and it is among the best-known Catholic churches in the United States.", "notes": ["The twin spires were added in 1888 and rise about 100 metres.", "It was built from donations of ordinary New Yorkers, many of them immigrants.", "The bronze doors show the patron saints of New York.", "The Lady Chapel at the east end was added in the early 20th century."]},
+{"title": "Mexico City Metropolitan Cathedral", "short": "Mexico City", "city": "Mexico City, Mexico", "local": 'cMex', "feather": 1, "file": "CatedralMetropolitana.jpg", "max": 742, "ratio": 1.797, "meta": [["Location", "Zócalo, Mexico City"], ["Built", "1573 – 1813"], ["Style", "Baroque, Renaissance and Neoclassical"], ["Dedicated to", "The Assumption of Mary"]], "desc": "The Metropolitan Cathedral of the Assumption is the largest cathedral in the Americas. It was built over nearly three centuries on the edge of the old Aztec sacred precinct, and its façade and towers combine the styles of several ages.", "notes": ["It was built on the soft lakebed soil of the old Tenochtitlan, and parts of it have slowly sunk.", "Its high altar, the Altar of Forgiveness, is a Baroque altarpiece of gilded wood.", "The two bell towers were completed in the 18th century.", "The Zócalo square in front is one of the largest public squares in the world."]},
+{"title": "Brasília Cathedral", "short": "Brasília", "city": "Brasília, Brazil", "file": "Catedral Metropolitana de Brasilia.jpg", "max": 3000, "ratio": 1.071, "meta": [["Location", "Esplanada dos Ministérios, Brasília"], ["Consecrated", "1970"], ["Style", "Modernist"], ["Architect", "Oscar Niemeyer"]], "desc": "Sixteen curving concrete columns rise like hands lifted in prayer to form the hyperboloid crown of Brasília’s cathedral. The nave lies below ground, and light pours in through coloured glass by Marianne Peretti. It is dedicated to Our Lady Aparecida, patroness of Brazil.", "notes": ["Each of the 16 concrete columns weighs about 90 tonnes.", "You enter through a dark tunnel and step out into a nave full of light.", "Four bronze statues of the Evangelists stand outside, by Alfredo Ceschiatti.", "The structure was engineered by Joaquim Cardozo."]},
+{"title": "Basilica of Our Lady of Peace", "short": "Yamoussoukro", "city": "Yamoussoukro, Côte d’Ivoire", "file": "Basilique Notre-Dame de la Paix Yamoussoukro.jpg", "max": 1920, "ratio": 1.333, "meta": [["Location", "Yamoussoukro, Côte d’Ivoire"], ["Built", "1985 – 1989"], ["Consecrated", "1990, by Pope John Paul II"], ["Inspired by", "St. Peter’s Basilica, Rome"]], "desc": "Rising from the savanna, this basilica is one of the largest churches in the world. Its dome and colonnade were inspired by St. Peter’s in Rome, and its great stained-glass windows fill the interior with colour. It was consecrated by Pope John Paul II in 1990.", "notes": ["The dome, with its cross, rises more than 150 metres.", "It was commissioned by President Félix Houphouët-Boigny.", "The stained glass covers thousands of square metres.", "The basilica was given to the Holy See as a gift."]},
+{"title": "Manila Cathedral", "short": "Manila", "city": "Manila, Philippines", "local": 'cMan', "feather": 1, "file": "Manila Cathedral inside Intramuros.jpg", "max": 466, "ratio": 1.086, "meta": [["Location", "Intramuros, Manila"], ["Present building", "Completed 1958"], ["Style", "Romanesque Revival"], ["Title", "Minor Basilica of the Immaculate Conception"]], "desc": "The Minor Basilica and Metropolitan Cathedral of the Immaculate Conception stands inside the old Spanish walled city of Intramuros. The church on this site has been destroyed several times by earthquakes and war, and the present cathedral was rebuilt after the Second World War.", "notes": ["It is the seat of the Archbishop of Manila.", "The cathedral’s bells ring from a tall belfry beside the main façade.", "Its stained-glass windows show scenes of the Gospels and the Marian titles.", "Intramuros itself is a walled city founded by the Spanish in 1571."]},
+{"title": "Basilica of Bom Jesus", "short": "Goa", "city": "Old Goa, India", "file": "Basilica of Bom Jesus, Old Goa, India.JPG", "max": 3456, "ratio": 1.333, "meta": [["Location", "Old Goa, India"], ["Built", "1594 – 1605"], ["Style", "Jesuit Baroque"], ["Status", "UNESCO World Heritage (1986)"]], "desc": "The Basilica of Bom Jesus, “Good Jesus”, keeps the remains of Saint Francis Xavier, the Jesuit missionary to Asia, in a silver casket. Its bare laterite façade carries Baroque ornament and has stood for more than four centuries in the old Portuguese capital of Goa.", "notes": ["It is one of the oldest churches in India.", "The silver casket of St Francis Xavier is raised for the Exposition of the Sacred Relics.", "The interior has a gilded altarpiece dedicated to the infant Jesus.", "The basilica is part of the UNESCO site “Churches and Convents of Goa”."]}
+];
+
+const ART=[
+{title:'The Creation of Adam',artist:'Michelangelo Buonarroti',file:'Michelangelo,_Creation_of_Adam_01.jpg',local:'p0',max:960,ratio:1.943,
+ meta:[['Date','c.1508 – 1512'],['Medium','Fresco'],['Location','Sistine Chapel, Vatican'],['Patron','Pope Julius II']],
+ desc:'The most famous scene of the Sistine Chapel ceiling shows God giving life to Adam. Their fingers almost touch, leaving a tiny gap that has become an enduring symbol of the bond between Creator and creature.',
+ notes:['Adam reclines, limp; life has not yet flowed until God’s touch arrives.','God is painted full of power, borne by angels within a crimson mantle.','A famous reading sees the mantle’s shape as a human brain.','Michelangelo painted the whole ceiling standing on scaffolding.']},
+{title:'The Last Judgement',artist:'Michelangelo Buonarroti',file:'Last_Judgement_(Michelangelo).jpg',local:'p1',max:960,ratio:0.908,
+ meta:[['Date','1536 – 1541'],['Medium','Fresco'],['Location','Altar wall, Sistine Chapel'],['Patrons','Popes Clement VII & Paul III']],
+ desc:'More than three hundred figures swirl around Christ the Judge at His Second Coming. The saved rise to heaven on the left, the damned sink on the right. It was painted almost three decades after the ceiling of the same chapel.',
+ notes:['Christ raises His arm in judgement, with the Virgin Mary at His side.','St Bartholomew holds his flayed skin; its face is believed to be Michelangelo’s self-portrait.','After the Council of Trent, Daniele da Volterra added drapery to many nude figures.','Costly lapis lazuli blue was used lavishly for the sky.']},
+{title:'The Last Supper',artist:'Leonardo da Vinci',file:'Leonardo_da_Vinci_-_The_Last_Supper_high_res.jpg',local:'p2',max:960,ratio:1.839,
+ meta:[['Date','c.1495 – 1498'],['Medium','Tempera & oil on plaster'],['Location','Santa Maria delle Grazie, Milan'],['Patron','Ludovico Sforza']],
+ desc:'Leonardo captures the moment Jesus says, “One of you will betray me.” The twelve Apostles react in waves of shock. Fragile from the start because of Leonardo’s experimental technique, the refectory mural underwent a long restoration (1978–1999).',
+ notes:['Every line of perspective meets at Christ’s head, the centre of the composition.','The Apostles are arranged in four groups of three.','Judas recoils into shadow, clutching a money bag.','The window behind Christ frames His head like a natural halo.']},
+{title:'The Sistine Madonna',artist:'Raphael',file:'Raphael_-_The_Sistine_Madonna_-_Google_Art_Project.jpg',local:'p3',max:960,ratio:0.73,
+ meta:[['Date','c.1512 – 1513'],['Medium','Oil on canvas'],['Location','Gemäldegalerie Alte Meister, Dresden'],['Patron','Pope Julius II']],
+ desc:'The Virgin steps down from the clouds holding the Christ Child, as if a curtain of heaven had just been drawn aside. The altarpiece was painted for the church of San Sisto in Piacenza, Italy.',
+ notes:['St Sixtus kneels on the left, St Barbara on the right.','The sky behind Mary is made of faint faces of angels.','The two cherubs at the bottom are among the most famous details in art history.','The green curtain above stresses the sense of a divine vision.']},
+{title:'The Calling of St Matthew',artist:'Caravaggio',file:'Caravaggio_-_La_vocazione_di_San_Matteo.jpg',local:'p4',max:960,ratio:1.069,
+ meta:[['Date','1599 – 1600'],['Medium','Oil on canvas'],['Location','Contarelli Chapel, San Luigi dei Francesi, Rome'],['Technique','Tenebrism']],
+ desc:'In a dark room where tax collectors count their coins, Christ enters and points to Matthew. A slanting shaft of light sweeps the room, a sign of the grace that calls the sinner.',
+ notes:['Christ’s pointing hand echoes Adam’s hand in Michelangelo’s fresco.','The figures wear clothes of Caravaggio’s own day, making the Gospel feel present.','Which figure is actually Matthew is still debated.','Sharp contrast of light and dark is the hallmark of Caravaggio.']},
+{title:'The Burial of the Count of Orgaz',artist:'El Greco',file:'El_Greco_-_The_Burial_of_the_Count_of_Orgaz.JPG',local:'p5',max:960,ratio:0.816,
+ meta:[['Date','1586 – 1588'],['Medium','Oil on canvas'],['Location','Church of Santo Tomé, Toledo'],['Size','c.480 × 360 cm']],
+ desc:'Legend says that when the pious Count of Orgaz was buried in 1323, St Stephen and St Augustine came down from heaven to lay him to rest themselves. El Greco divides the canvas into earth and heaven: a calm, real world below and a whirling, luminous heaven above.',
+ notes:['The count’s soul is shown as a small figure carried up by an angel.','Noblemen of El Greco’s Toledo appear as mourners.','The boy at front left is believed to be El Greco’s son, Jorge Manuel.','Above, Christ receives the soul through the intercession of Mary and John the Baptist.']},
+{title:'The Annunciation',artist:'Fra Angelico',file:'Fra_Angelico_-_The_Annunciation_-_WGA0454.jpg',local:'p6',max:960,ratio:1.019,
+ meta:[['Date','c.1425 – 1426'],['Medium','Tempera & gold on panel'],['Location','Museo del Prado, Madrid'],['Painter','Dominican friar']],
+ desc:'The Angel Gabriel bows before Mary as she receives the news that she will bear the Son of God. Fra Angelico, the Dominican friar beatified by Pope John Paul II in 1982, painted with a tenderness and colour like prayer.',
+ notes:['On the left, Adam and Eve are expelled from Eden: the Fall meets the dawn of Redemption.','A golden ray with the dove of the Holy Spirit reaches toward Mary.','The columned loggia shows early Renaissance perspective.','The predella below holds five scenes from the life of Mary.']},
+{title:'The Immaculate Conception',artist:'Bartolomé Esteban Murillo',file:'Inmaculada_de_los_Venerables_o_de_Soult.jpg',local:'p7',max:960,ratio:0.682,
+ meta:[['Date','c.1678'],['Medium','Oil on canvas'],['Location','Museo del Prado, Madrid'],['Also known as','Immaculate of Soult']],
+ desc:'Mary floats above a crescent moon, surrounded by cherubs in golden light. Murillo, the Baroque painter of Seville, became the greatest painter of the Immaculata. This canvas was made for the Hospital de los Venerables in Seville.',
+ notes:['The crescent moon beneath her feet recalls Revelation 12:1.','Seized by Marshal Soult during Napoleon’s invasion, it hung for years in the Louvre.','It returned to Spain in 1941 through an art exchange with France.','The cherubs carry symbols of purity: lilies, roses and palms.']},
+{title:'The School of Athens',artist:'Raphael',file:'Sanzio_01.jpg',local:'p24',max:960,ratio:1.289,
+ meta:[['Date','1509 – 1511'],['Medium','Fresco'],['Location','Stanza della Segnatura, Vatican'],['Patron','Pope Julius II']],
+ desc:'In the Pope’s library, Raphael gathered the philosophers of Greece beneath vaults inspired by the new St Peter’s. On the opposite wall is the “Disputa”, a painting of the Eucharist, so the room celebrates faith and reason in harmony.',
+ notes:['Plato points upward and Aristotle points down, at the centre of the perspective.','Plato’s face is often said to be modelled on Leonardo da Vinci.','The brooding Heraclitus on the steps is thought to portray Michelangelo.','Raphael painted himself at the far right, looking out at the viewer.']},
+{title:'The Entombment of Christ',artist:'Caravaggio',file:'Caravaggio_-_La_Deposizione_di_Cristo.jpg',local:'p8',max:574,ratio:0.664,
+ meta:[['Date','1603 – 1604'],['Medium','Oil on canvas'],['Location','Pinacoteca Vaticana'],['Origin','Santa Maria in Vallicella, Rome']],
+ desc:'Nicodemus and John lower the body of Christ into the tomb, watched by the Virgin and the weeping women. The composition descends like a movement toward the altar, where the Body of Christ is made present in the Eucharist.',
+ notes:['Nicodemus looks straight at us, inviting us to share the burden.','The corner of the stone slab juts out as if breaking into the viewer’s space.','Mary of Clopas throws up her arms to heaven, the dramatic peak of the scene.','Counted among Caravaggio’s finest works.']},
+{title:'The Transfiguration',artist:'Raphael',file:'Raphael_-_The_Transfiguration_-_Google_Art_Project.jpg',local:'p9',max:960,ratio:0.705,
+ meta:[['Date','1516 – 1520'],['Medium','Oil on panel'],['Location','Pinacoteca Vaticana'],['Patron','Cardinal Giulio de’ Medici']],
+ desc:'Christ shines in glory on Mount Tabor above, while below the apostles struggle to heal a possessed boy. Raphael joins the two moments of the Gospel into one picture of heaven touching earth. It was his last painting and hung over his bier.',
+ notes:['Christ floats between Moses and Elijah, with Peter, James and John fallen before the light.','The lower crowd points up toward the mountain, linking suffering to hope.','Raphael died in 1520 before finishing it; his pupils completed the work.','Considered by many in his time the greatest painting in the world.']},
+{title:'Virgin of the Rocks',artist:'Leonardo da Vinci',file:'Leonardo_da_Vinci_-_Virgin_of_the_Rocks_(Louvre).jpg',local:'p10',max:960,ratio:0.612,
+ meta:[['Date','c.1483 – 1486'],['Medium','Oil on panel'],['Location','Louvre, Paris'],['Patron','Confraternity of the Immaculate Conception']],
+ desc:'Mary shelters the infant John the Baptist while the Christ Child blesses him, with an angel beside them in a dim grotto. Leonardo’s soft shading and strange rocky landscape give the holy meeting a dreamlike calm.',
+ notes:['A second version, painted later, hangs in the National Gallery in London.','The plants at the cave’s edge are drawn with a botanist’s accuracy.','The pyramid of figures became a model for High Renaissance composition.','Painted for a chapel of the Immaculate Conception in Milan.']},
+{title:'The Doni Tondo',artist:'Michelangelo Buonarroti',file:'Tondo_Doni,_por_Miguel_Ángel.jpg',local:'p11',max:960,ratio:0.983,
+ meta:[['Date','c.1507'],['Medium','Tempera on panel'],['Location','Uffizi, Florence'],['Patron','Agnolo Doni']],
+ desc:'The Holy Family is twisted into a tight spiral, with Mary turning to receive the Child from Joseph. Behind them the young John the Baptist stands before a row of nude figures, often read as the pagan world before Christ.',
+ notes:['Michelangelo’s only finished easel painting.','The original frame, carved to his design, survives with the work.','Its bright, sculptural colours influenced the Mannerists.','Joseph is shown as an active, vigorous protector of the Child.']},
+{title:'Lamentation (The Mourning of Christ)',artist:'Giotto di Bondone',file:'Giotto_-_Scrovegni_-_-36-_-_Lamentation_(The_Mourning_of_Christ)_adj.jpg',local:'p12',max:960,ratio:1.081,
+ meta:[['Date','c.1305'],['Medium','Fresco'],['Location','Scrovegni Chapel, Padua'],['Patron','Enrico Scrovegni']],
+ desc:'Mary cradles her dead Son as the disciples and women grieve, while angels wheel in anguish across a blue sky. Giotto gave sacred figures real weight and real sorrow, and broke from the flat gold of Byzantine art.',
+ notes:['The sloping rock draws the eye straight to the face of Christ.','The angels’ grief is wild, the earthly mourners’ quiet and heavy.','Considered a turning point toward Renaissance realism.','Part of a full cycle of the lives of Mary and Christ.']},
+{title:'Madonna of the Magnificat',artist:'Sandro Botticelli',file:'Sandro_Botticelli_-_Madonna_del_Magnificat.jpg',local:'p13',max:960,ratio:1.348,
+ meta:[['Date','c.1483'],['Medium','Tempera on panel'],['Location','Uffizi, Florence'],['Format','Tondo, about 118 cm across']],
+ desc:'Mary writes the first words of her Magnificat as angels crown her and hold the book and inkwell. The Child reaches toward a pomegranate, a sign of the Passion to come. The round format wraps the figures in a single graceful curve.',
+ notes:['The Magnificat is Mary’s song of praise from Luke’s Gospel.','The pomegranate points to the Resurrection and the Church.','The crown held above her recognises her as Queen of Heaven.','A landscape glimmers through the window behind her.']},
+{title:'The Assumption of the Virgin',artist:'Titian',file:'Tizian_041.jpg',local:'p14',max:960,ratio:0.544,
+ meta:[['Date','1516 – 1518'],['Medium','Oil on panel'],['Location','Santa Maria Gloriosa dei Frari, Venice'],['Patron','Franciscan friars of the Frari']],
+ desc:'Mary rises on clouds to heaven among angels while the apostles below reach up in wonder. Titian’s blazing reds and golden light made this one of the most dramatic altarpieces yet painted in Venice.',
+ notes:['The panel is over six metres tall and still stands on the high altar.','The red robes of the apostles lead the eye upward.','God the Father waits at the top to receive Mary.','It made Titian’s name across Italy.']},
+{title:'The Return of the Prodigal Son',artist:'Rembrandt van Rijn',file:'Rembrandt_Harmensz_van_Rijn_-_Return_of_the_Prodigal_Son_-_Google_Art_Project.jpg',local:'p15',max:960,ratio:0.766,
+ meta:[['Date','c.1668'],['Medium','Oil on canvas'],['Location','Hermitage, Saint Petersburg'],['Source','Luke 15:11 – 32']],
+ desc:'A ragged son kneels as his father rests both hands on his back in forgiveness. Painted near the end of Rembrandt’s life, it is a quiet picture of God’s mercy, lit from within by a warm, golden glow.',
+ notes:['The father’s two hands differ: one strong and masculine, one soft and tender.','The standing figure on the right looks on with cold reserve, as the elder brother.','The son’s worn shoe shows how far he has come.','Henri Nouwen made it the centre of a famous spiritual book.']},
+{title:'Supper at Emmaus',artist:'Caravaggio',file:'1602-3_Caravaggio,Supper_at_Emmaus_National_Gallery,_London.jpg',local:'p16',max:960,ratio:1.408,
+ meta:[['Date','1601'],['Medium','Oil on canvas'],['Location','National Gallery, London'],['Source','Luke 24:13 – 35']],
+ desc:'The risen Christ blesses the bread and two disciples suddenly recognise Him. One flings out his arms and the other grips his chair, while the innkeeper stands unaware. Caravaggio freezes the moment of revelation.',
+ notes:['The basket of fruit teeters on the table edge, almost into our space.','Christ is beardless, unlike in his later version of the scene.','The shadow of the basket recalls a fish, an early Christian symbol.','The outstretched arm seems to reach toward the viewer.']},
+{title:'Agnus Dei',artist:'Francisco de Zurbarán',file:'Agnus_Dei_Zurbarán.jpg',local:'p17',max:960,ratio:1.675,
+ meta:[['Date','c.1635 – 1640'],['Medium','Oil on canvas'],['Location','Museo del Prado, Madrid'],['Subject','Lamb of God']],
+ desc:'A lamb lies bound at the feet, set against a plain dark ground and lit by a single light. Zurbarán’s stillness makes the animal a quiet image of Christ’s sacrifice, “the Lamb of God who takes away the sins of the world”.',
+ notes:['Several versions exist; this one is the most austere.','The bound legs recall both sacrifice and gentleness.','The black background removes every distraction.','Painted in Seville, where Zurbarán worked for convents and churches.']},
+{title:'Christ Crucified',artist:'Diego Velázquez',file:'Cristo_en_la_Cruz_(Velázquez,_1631).jpg',local:'p18',max:960,ratio:0.548,
+ meta:[['Date','c.1632'],['Medium','Oil on canvas'],['Location','Museo del Prado, Madrid'],['Patron','Convent of San Plácido, Madrid']],
+ desc:'Christ hangs dead on the cross, head bowed, his hair falling across his face against a black void. Velázquez shows four nails and a calm, noble body, with the stillness of prayer rather than the horror of torture.',
+ notes:['Painted for the nuns of San Plácido, who used it for devotion.','The fall of hair hides the face, inviting silent prayer.','Four nails follow the iconography of his teacher Pacheco.','The dark background removes any setting but the cross itself.']},
+{title:'The Descent from the Cross',artist:'Peter Paul Rubens',file:'Peter_Paul_Rubens_-_The_Descent_from_the_Cross_(Antwerp_Cathedral).,_c._1613.jpg',local:'p19',max:960,ratio:0.735,
+ meta:[['Date','1612 – 1614'],['Medium','Oil on panel (triptych)'],['Location','Cathedral of Our Lady, Antwerp'],['Patron','Guild of Arquebusiers']],
+ desc:'Helpers lower the pale body of Christ in a white shroud along a sweeping diagonal, while Mary reaches out to receive Him. The whole picture seems to carry the dead weight of the Saviour down toward the viewer.',
+ notes:['It still hangs in the cathedral for which it was painted.','The white shroud is the brightest part, drawing the eye to Christ.','Rubens may have chosen the subject to honour St Christopher, patron of the guild.','Its flowing energy defined Flemish Baroque.']},
+{title:'Maestà',artist:'Duccio di Buoninsegna',file:'Duccio_maesta1021.jpg',local:'p20',max:960,ratio:2.03,
+ meta:[['Date','1308 – 1311'],['Medium','Tempera and gold on panel'],['Location','Museo dell’Opera del Duomo, Siena'],['Patron','City of Siena']],
+ desc:'The Virgin is enthroned in majesty among angels and saints, in a giant altarpiece painted for Siena’s cathedral. Its back was covered with scenes from the Passion. The people of Siena carried it through the streets in procession.',
+ notes:['Siena treasured it as its heavenly protector.','Its front honoured Mary; its back told Christ’s Passion in many panels.','It was later cut apart and some panels are now in other museums.','A high point of Sienese Gothic art.']},
+{title:'The Crucifixion (Isenheim Altarpiece)',artist:'Matthias Grünewald',file:'Mathis_Gothart_Grünewald_022.jpg',local:'p21',max:960,ratio:1.127,
+ meta:[['Date','c.1512 – 1516'],['Medium','Oil on panel'],['Location','Unterlinden Museum, Colmar'],['Patron','Hospital Order of St Anthony']],
+ desc:'A tortured Christ, his skin covered in sores, hangs over the grieving Mary, John and Magdalene, while John the Baptist points to Him. It was made for a hospital of patients with painful skin disease, who saw their own suffering in Christ’s.',
+ notes:['The Baptist’s words, “He must increase”, are written beside him.','The lamb with the cross sits at the Baptist’s feet.','Christ’s skin echoes the sores of the hospital’s patients.','The altarpiece opens in layers to reveal Resurrection scenes.']},
+{title:'Christ Giving the Keys to St Peter',artist:'Pietro Perugino',file:'Entrega_de_las_llaves_a_San_Pedro_(Perugino).jpg',local:'p22',max:960,ratio:1.658,
+ meta:[['Date','1481 – 1482'],['Medium','Fresco'],['Location','Sistine Chapel, Vatican'],['Source','Matthew 16:18 – 19']],
+ desc:'Christ hands the keys of the kingdom to the kneeling Peter, founding the Church and the papacy on the rock. Behind them a vast, perfectly ordered square stretches to a domed temple, with the Roman arches of Constantine on either side.',
+ notes:['Perugino signed the work with grand perspective lines meeting at the temple door.','The scene stands for the authority of the Pope as successor of Peter.','Small figures in the square show the order of the Renaissance city.','Painted with Botticelli and Ghirlandaio for Pope Sixtus IV.']},
+{title:'The Ghent Altarpiece',artist:'Hubert and Jan van Eyck',file:'Lamgods_open.jpg',local:'p23',max:960,ratio:1.368,
+ meta:[['Date','c.1423 – 1432'],['Medium','Oil on panel'],['Location','St Bavo’s Cathedral, Ghent'],['Patron','Joos Vijd and Elisabeth Borluut']],
+ desc:'In the central panel, the Lamb of God stands on an altar while pilgrims, saints, judges and clergy gather from every direction. Above, God sits enthroned between Mary and John the Baptist. It is one of the most complex and brilliant early oil paintings.',
+ notes:['It has survived fires, iconoclasts, theft and war.','The stolen “Just Judges” panel was never recovered.','Every plant and gem is painted with astonishing detail.','Opens and closes like a book to show different scenes.']}
+];
+
+CAT.forEach(c=>{c.kicker=c.city});ART.forEach(a=>{a.kicker=a.artist});
+
+/* ================= HERO ================= */
+const SAN={file:'Sanzio_01.jpg',max:1000,title:'Sekolah Athena'};
+$('#mega').innerHTML=[...'CATHOLIC'].map((ch,i)=>`<span class="c" style="--d:${.15+i*.07}s">${ch}</span>`).join('');
+document.querySelectorAll('[data-a]').forEach(i=>{i.src=A[i.dataset.a]});$('#clouds').style.backgroundImage=`url(${A.clouds})`;
+const STN=['Jesus is condemned','He takes up His cross','He falls the first time','He meets His Mother','Simon helps carry the cross','Veronica wipes His face','He falls the second time','He meets the women of Jerusalem','He falls the third time','He is stripped of His garments','He is nailed to the cross','He dies on the cross','He is taken down','He is laid in the tomb'];
+const RN=['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV'];
+const stItem=k=>`<figure class="st-it"><img src="${A['st'+k]}" alt="Station ${RN[k]}: ${STN[k]}"><figcaption><b>${RN[k]}</b>${STN[k]}</figcaption></figure>`;
+const col=ks=>{const h=ks.map(stItem).join('');return `<div class="trk">${h}${h}</div>`};
+$('#sideL').innerHTML=col([0,1,2,3,4,5,6]);$('#sideR').innerHTML=col([7,8,9,10,11,12,13]);
+
+requestAnimationFrame(()=>requestAnimationFrame(()=>document.body.classList.add('ready')));
+
+const nav=$('#nav');let tk=false;
+addEventListener('scroll',()=>{if(tk)return;tk=true;requestAnimationFrame(()=>{const y=scrollY;nav.classList.toggle('solid',y>innerHeight*.6);
+  if(!RM&&y<innerHeight*1.2){$('#hands').style.transform=`translateY(${y*.16}px)`;$('.sun').style.marginTop=(y*.35)+'px';$('#mega').style.transform=`translateY(${y*.28}px)`}tk=false})},{passive:true});
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+
+/* wipe */
+const wipe=$('#wipe');
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const t=document.querySelector(a.getAttribute('href'));if(!t)return;e.preventDefault();
+  if(RM){t.scrollIntoView();return}
+  const w=a.dataset.t||'Catholic Classic';$('#wipeTxt').innerHTML=`<b>${w[0]}</b>${w.slice(1)}`;
+  wipe.className='wipe cover';
+  setTimeout(()=>{window.scrollTo(0,t.getBoundingClientRect().top+scrollY);wipe.className='wipe cover leave'},950);
+  setTimeout(()=>{wipe.className='wipe'},1900);
+});
+
+/* ================= KONSEKRASI ================= */
+{
+const sec=$('#konsekrasi'),paint=$('#paint'),shardsEl=$('#shards'),arms=$('#arms'),hostx=$('#hostx'),rays=$('#rays'),t0=$('#ct0'),t1=$('#ct1'),t2=$('#ct2'),bar=$('#cbar'),shade=$('#cshade');
+const PW=1376,PH=768;
+const SH=[
+ {c:'0 0,30% 0,26% 45%,0 52%',dx:-50,dy:-45,r:-7},
+ {c:'30% 0,62% 0,58% 34%,26% 45%',dx:-6,dy:-70,r:4},
+ {c:'62% 0,100% 0,100% 48%,58% 34%',dx:55,dy:-45,r:7},
+ {c:'26% 45%,58% 34%,64% 70%,34% 76%',dx:0,dy:-28,r:0},
+ {c:'58% 34%,100% 48%,100% 100%,64% 70%',dx:65,dy:15,r:-6},
+ {c:'0 52%,26% 45%,34% 76%,30% 100%,0 100%',dx:-65,dy:25,r:6},
+ {c:'34% 76%,64% 70%,100% 100%,30% 100%',dx:8,dy:70,r:-4}];
+shardsEl.innerHTML=SH.map(x=>`<div class="shard" style="background-image:url(${A.massbase});clip-path:polygon(${x.c});-webkit-clip-path:polygon(${x.c})"></div>`).join('');
+const shards=[...shardsEl.children];const whole=document.createElement('div');whole.className='shard';whole.style.cssText=`background-image:url(${A.massbase});filter:none;opacity:0;z-index:1`;shardsEl.appendChild(whole);
+const AB=[563,303,612,388];
+Object.assign(arms.style,{left:AB[0]/PW*100+'%',top:AB[1]/PH*100+'%',width:(AB[2]-AB[0])/PW*100+'%',height:(AB[3]-AB[1])/PH*100+'%'});
+const HC=[585,315],HR=11;
+Object.assign(hostx.style,{left:(HC[0]-HR)/PW*100+'%',top:(HC[1]-HR)/PH*100+'%',width:HR*2/PW*100+'%',height:HR*2/PH*100+'%'});
+const cl=v=>Math.max(0,Math.min(1,v)),eo=t=>1-Math.pow(1-t,3),eio=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+let sp=0,tp=0,run=false;
+const target=()=>{const r=sec.getBoundingClientRect();return cl(-r.top/(sec.offsetHeight-innerHeight))};
+function draw(p){
+  const W=innerWidth,H=innerHeight,PR=PW/PH;
+  let w=Math.max(W,H*PR),h=w/PR;if(h<H){h=H;w=h*PR}
+  const x0=Math.min(0,Math.max(W-w,W/2-HC[0]/PW*w)),y0=(H-h)/2;
+  const asm=cl(p/.5),e=eio(cl((p-.58)/.32)),fin=cl((p-.82)/.1);
+  const sc=1+e*.35;
+  paint.style.width=w+'px';paint.style.height=h+'px';
+  paint.style.transformOrigin=`${HC[0]/PW*100}% ${HC[1]/PH*100}%`;
+  paint.style.transform=`translate(${x0}px,${y0}px) scale(${sc})`;
+  paint.style.setProperty('--v',cl((asm-.8)*5));
+  shards.forEach((el,i)=>{const x=SH[i],t=eo(cl(asm*1.6-i*.09));
+    el.style.transform=`translate(${(1-t)*x.dx}vw,${(1-t)*x.dy}vh) rotate(${(1-t)*x.r}deg) scale(${.9+t*.1})`;
+    el.style.opacity=.15+t*.85;el.style.filter=t>.9?`brightness(${1-e*.4})`:'none'});
+  whole.style.opacity=cl((asm-.97)*40);whole.style.filter=`brightness(${1-e*.4})`;
+  const ta=eo(cl(asm*1.6-3*.09)),s3=SH[3],lift=0;
+  arms.style.transform=`translate(${(1-ta)*s3.dx}vw,${(1-ta)*s3.dy}vh) translateY(${lift*100}%)`;
+  arms.style.opacity=ta;
+  hostx.style.opacity=cl((asm-.9)*10);
+  hostx.style.transform=`translateY(${lift*(AB[3]-AB[1])/HR/2*100}%) scale(1)`;
+  hostx.style.setProperty('--g',(cl((asm-.9)*10)*.95).toFixed(3));
+  const hx=x0+HC[0]/PW*w,hy=y0+HC[1]/PH*h,rz=Math.max(W,H)*1.6;
+  rays.style.width=rays.style.height=rz+'px';rays.style.left=(hx-rz/2)+'px';rays.style.top=(hy-rz/2)+'px';rays.style.opacity=e*.6;
+  t0.style.opacity=1-cl(p*6);t0.style.transform=`translateY(${-cl(p*6)*30}px)`;
+  const o1=cl((asm-.85)*6)*(1-cl((p-.62)*10));t1.style.opacity=o1;t1.style.transform=`translateY(${(1-o1)*16}px)`;
+  t2.style.opacity=fin;t2.style.transform=`translateY(${(1-fin)*24}px)`;
+  shade.style.opacity=Math.max(fin,1-cl(p*6))*.9;
+  bar.style.width=(p*100)+'%';
+}
+function loop(){sp+=(tp-sp)*(RM?1:.12);draw(sp);if(Math.abs(tp-sp)>.0005)requestAnimationFrame(loop);else{sp=tp;draw(sp);run=false}}
+function kick(){tp=target();if(!run){run=true;requestAnimationFrame(loop)}}
+addEventListener('scroll',kick,{passive:true});addEventListener('resize',()=>draw(sp));
+tp=sp=target();draw(sp);
+}
+
+/* ================= CHURCH ================= */
+const kstage=$('#stage'),chsEl=$('#chs'),info=$('#info'),knames=$('#knames');
+chsEl.innerHTML=CAT.map((c,i)=>`<div class="chu${c.local&&!c.feather?'':' feather'}" data-i="${i}" role="button" aria-label="${esc(c.title)}"><div class="ci">${imgEl(c,900,false)}</div></div>`).join('');
+knames.innerHTML=CAT.map((c,i)=>`<button data-i="${i}">${esc(c.short||c.title.replace(' Cathedral','').replace("St. Peter's Basilica",'St. Peter’s').replace('Notre-Dame de Paris','Notre-Dame').replace('Sagrada Família','Sagrada Família'))}</button>`).join('');
+const chEls=[...chsEl.children];
+let cur=-1;
+const metaHTML=m=>`<dl class="mrow">${m.map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>`;
+function place(){
+  const n=CAT.length,SW=kstage.clientWidth,SH=kstage.clientHeight;
+  chEls.forEach((el,i)=>{let o=i-cur;if(o>n/2)o-=n;if(o<-n/2)o+=n;const a=Math.abs(o),c=CAT[i];
+    let h=SH*(c.local?1:.86),w=h*c.ratio;const mw=SW*(c.local?.5:.56);if(w>mw){w=mw;h=w/c.ratio}
+    const sc=a===0?1:a===1?.5:.32,x=o===0?0:Math.sign(o)*(SW*.3+(a-1)*SW*.14);
+    el.style.width=w+'px';el.style.height=h+'px';
+    el.style.transform=`translateX(calc(-50% + ${x}px)) scale(${sc})`;
+    el.style.opacity=a===0?1:a===1?.5:0;el.style.zIndex=10-a;el.style.pointerEvents=a>=2?'none':'';
+    el.setAttribute('aria-hidden',a>=2)});
+}
+function setCath(i){
+  i=(i+CAT.length)%CAT.length;if(i===cur)return;const first=cur<0;cur=i;place();
+  const el=chEls[cur];el.classList.remove('up');void el.offsetWidth;if(!first)el.classList.add('up');
+  [...knames.children].forEach((b,k)=>b.setAttribute('aria-current',k===cur));
+  {const b=knames.children[cur];knames.scrollTo({left:b.offsetLeft-knames.clientWidth/2+b.clientWidth/2,behavior:first?'auto':'smooth'});$('#kcount').textContent=String(cur+1).padStart(2,'0')+' / '+String(CAT.length).padStart(2,'0')}
+  const c=CAT[cur];info.classList.remove('show');
+  setTimeout(()=>{
+    const L=[`<h4>${esc(c.title)}</h4>`,`<div class="city sw"><b>${esc(c.city[0])}</b>${esc(c.city.slice(1))}</div>`,metaHTML(c.meta)];
+    const R=[`<p>${esc(c.desc)}</p>`,`<ul>${c.notes.map(n=>`<li>${esc(n)}</li>`).join('')}</ul>`];
+    info.innerHTML=`<div>${L.map((l,k)=>`<div class="ln" style="--d:${k*.09}s">${l}</div>`).join('')}</div><div>${R.map((l,k)=>`<div class="ln" style="--d:${.2+k*.1}s">${l}</div>`).join('')}</div>`;
+    requestAnimationFrame(()=>requestAnimationFrame(()=>info.classList.add('show')));
+  },first?0:420);
+}
+let sx=null,swiped=false;
+kstage.addEventListener('pointerdown',e=>{sx=e.clientX;swiped=false});
+kstage.addEventListener('pointerup',e=>{if(sx==null)return;const d=e.clientX-sx;sx=null;if(Math.abs(d)>50){swiped=true;setCath(cur+(d<0?1:-1));setTimeout(()=>swiped=false,60)}});
+kstage.addEventListener('click',e=>{if(swiped)return;const el=e.target.closest('.chu');if(!el)return;const i=+el.dataset.i;if(i===cur)openViewer(CAT,i,el);else setCath(i)});
+knames.addEventListener('click',e=>{const b=e.target.closest('button');if(b)setCath(+b.dataset.i)});
+$('#cprev').onclick=()=>setCath(cur-1);$('#cnext').onclick=()=>setCath(cur+1);
+addEventListener('resize',place);
+setCath(0);
+
+/* ================= LUKISAN ================= */
+const CHR=[{i:6,n:'Early Renaissance',p:'15th century',t:'Perspective is born; gold and holiness still shine.'},{i:3,n:'High Renaissance',p:'c.1490 – 1527',t:'A perfect balance of beauty and faith.'},{i:5,n:'Mannerism',p:'c.1520 – 1600',t:'Elongated bodies, a whirling heaven.'},{i:4,n:'Baroque',p:'c.1600 – 1750',t:'Drama of light and shadow to move the heart.'}];
+const chrono=$('#chrono');
+chrono.innerHTML=CHR.map((c,k)=>`<button class="rv" style="--d:${k*.1}s" data-i="${c.i}"><div class="ci" data-fb="${esc(ART[c.i].title)}">${imgEl(ART[c.i],600)}</div><div class="cl"><h3>${c.n}</h3><span class="per">${c.p}</span><p>${c.t}</p></div></button>`).join('');
+chrono.addEventListener('click',e=>{const b=e.target.closest('button');if(b)openViewer(ART,+b.dataset.i,b.querySelector('.ci'))});
+const gal=$('#gal');
+gal.innerHTML=`<div class="note rv"><h4>The <em>Gallery</em></h4><p>Twenty-five masterpieces of Catholic art, from the frescoes of Giotto and the Sistine Chapel to the altars of Antwerp, Seville and Toledo. Click a painting to open it and read its story.</p></div>`+
+ ART.map((a,i)=>`<button class="pc rv" style="--d:${(i%3)*.1}s" data-i="${i}" aria-label="Open ${esc(a.title)}"><div class="pimg" data-fb="${esc(a.title)}" style="aspect-ratio:${a.ratio}">${imgEl(a,700)}</div><p class="cap"><em>${esc(a.title)}</em>, ${esc(a.meta[0][1])}<span>${esc(a.artist)}</span></p></button>`).join('');
+gal.addEventListener('click',e=>{const b=e.target.closest('.pc');if(b)openViewer(ART,+b.dataset.i,b.querySelector('.pimg'))});
+const heroOpen=()=>openViewer(ART,0,$('#hands'));
+$('#hands').addEventListener('click',heroOpen);$('#hands').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();heroOpen()}});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* ================= 3D transitions, openers ================= */
+$('#ptitle').innerHTML=[...'PAINTINGS'].map((ch,i)=>`<span class="c" style="--d:${.1+i*.06}s">${ch}</span>`).join('');
+io.observe($('#pop'));
+{const fs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');fs.unobserve(e.target)}}),{threshold:.2});fs.observe($('#fscene'));
+const D=[...document.querySelectorAll('[data-d3]')],R=[...document.querySelectorAll('[data-rot]')];let tk2=false;
+const upd=()=>{tk2=false;const H=innerHeight;
+  D.forEach(el=>{const r=el.getBoundingClientRect();if(r.bottom<-120||r.top>H+120)return;const p=Math.max(-1,Math.min(1,(r.top+r.height/2-H/2)/(H/2+r.height/2)));el.style.setProperty('--p',RM?0:p.toFixed(3))});
+  R.forEach(el=>{const r=el.parentNode.getBoundingClientRect();if(r.bottom<-400||r.top>H+400)return;el.style.transform=`rotate(${(scrollY*.05).toFixed(2)}deg)`})};
+addEventListener('scroll',()=>{if(!tk2){tk2=true;requestAnimationFrame(upd)}},{passive:true});addEventListener('resize',upd);upd()}
+/* ================= VESTMENTS showcase ================= */
+{
+const VI=[
+{g:'mass',o:9,n:'Alb',l:'Alba',w:'Priests, deacons, bishops and servers',t:'A long white linen robe reaching the ankles, worn over the amice and held at the waist by the cincture. Every other vestment is put on over it.',s:'The alb recalls the white garment of baptism and the robes of the saints washed in the blood of the Lamb (Revelation 7:14).'},
+{g:'mass',o:4,n:'Stole',l:'Stola',w:'Priests, deacons and bishops',t:'A long, narrow band worn around the neck. A priest lets it hang down in front; a deacon wears it over the left shoulder. It is made in the colour of the day.',s:'The sign of the ordained ministry and of the authority to teach, to sanctify and to govern. It is also worn for the sacraments, such as confession and baptism.'},
+{g:'mass',o:3,n:'Chasuble, Roman style',l:'Casula',w:'The priest at Mass',t:'The outer vestment of the priest at the altar. This stiff, shaped “fiddleback” cut, richly embroidered, was the common form in Baroque Europe and is still loved today.',s:'The name casula means “little house”. It stands for charity, which covers all, and for the sweet yoke of Christ that the priest takes upon himself.'},
+{g:'mass',o:8,n:'Chasuble, Gothic style',l:'Casula',w:'The priest at Mass',t:'The fuller, bell-shaped cut, closer to the ancient cloak from which the chasuble came. White damask with a gold pillar bearing a cross and a vine of grapes.',s:'The cross and the grapes point to the sacrifice of Christ and to the wine of the Eucharist. White is worn at Christmas and Easter and on feasts of the Lord, Mary and the saints.'},
+{g:'mass',o:7,n:'Dalmatic',l:'Dalmatica',w:'Deacons; bishops beneath the chasuble at solemn Mass',t:'A wide-sleeved tunic with two vertical bands and cross-bands. It is the deacon’s own vestment, worn over the alb and stole.',s:'Its vesting prayer asks for “the garment of salvation and the vesture of gladness”: a sign of the deacon’s joy in service.'},
+{g:'mass',o:5,n:'Humeral veil',l:'Velum humerale',w:'Priest or deacon at Benediction and processions',t:'A long shoulder cloth, often gold, that wraps the shoulders and covers the hands as the minister holds the monstrance or ciborium.',s:'The hands are covered so that nothing of the minister’s own touches the Blessed Sacrament: reverence before the presence of Christ.'},
+{g:'mass',o:10,n:'Mitre',l:'Mitra',w:'Bishops, abbots and the Pope',t:'The bishop’s tall pointed headdress, with a peak at the front and back and two ribbons, the infulae, hanging behind.',s:'The two peaks are often read as the Old and New Testaments, which the bishop is called to know and to teach.'},
+{g:'dress',o:11,n:'Priest’s cassock',l:'Soutane',w:'Priests and deacons',t:'The black cassock with its short shoulder cape (pellegrina) and fringed sash. The everyday robe of the cleric, buttoned from collar to hem.',s:'Black stands for humility and for dying to the world. Tradition counts 33 buttons, one for each year of Christ’s life.'},
+{g:'dress',o:0,n:'Bishop’s cassock',l:'Habitus episcopalis',w:'Bishops',t:'A black cassock trimmed with red and closed with a row of buttons, the short cape and a purple sash. The colours mark the rank of the one who wears them.',s:'Purple is the colour of penance and of the dignity of the bishop’s office; cardinals wear scarlet in its place.'},
+{g:'dress',o:6,n:'Choir dress',l:'Superpelliceum',w:'Priests, deacons and servers',t:'A short white linen surplice with wide sleeves, worn over the black cassock for liturgies outside Mass: Benediction, the Liturgy of the Hours and processions.',s:'The name means “over the fur robes”, from medieval clergy who wore furs in cold churches. Today it recalls the white garment of baptism.'},
+{g:'dress',o:2,n:'Mozzetta and rochet',l:'Mozzetta et rochetum',w:'Bishops, cardinals and prelates',t:'A knee-length linen rochet trimmed with lace, covered by a short buttoned shoulder cape, the mozzetta. This is the choir dress of a bishop.',s:'The mozzetta is purple for bishops, scarlet for cardinals and red for the Pope. It is a sign of jurisdiction and of the authority to teach.'},
+{g:'dress',o:1,n:'Papal cassock',l:'Habitus papalis',w:'The Pope',t:'A white cassock with the short white cape, a white sash with gold fringe and the Pope’s arms, and a pectoral cross on a cord.',s:'White is the Pope’s colour. The custom is traced to the Dominican Pius V, who kept his white habit after his election in 1566.'}
+];
+const vs=$('#vst'),fig=$('#vfimg'),gl=$('#vgl'),gm=$('#vgm');
+let tab='mass',cur=VI.findIndex(x=>x.g==='mass'),busy2=false;
+const ids=()=>VI.map((x,i)=>i).filter(i=>VI[i].g===tab);
+function textFor(it){return `<div class="gk">Worn by ${esc(it.w)}</div><h4>${esc(it.n)}<em>${esc(it.l)}</em></h4><p>${esc(it.t)}</p><div class="sym">${esc(it.s)}</div>`}
+function paint(){
+  const L=ids();
+  gl.innerHTML=L.map((i,k)=>`<li><button data-i="${i}" aria-current="${i===cur}"><span class="no">${String(k+1).padStart(2,'0')}</span><span class="nm">${esc(VI[i].n)}</span><span class="lt">${esc(VI[i].l)}</span></button></li>`).join('');
+  vs.querySelectorAll('.vst-mode button').forEach(b=>b.setAttribute('aria-current',b.dataset.t===tab));
+  $('#vcount').textContent=String(L.indexOf(cur)+1).padStart(2,'0')+' / '+String(L.length).padStart(2,'0');
+}
+function show(i,instant){
+  if(busy2)return;const it=VI[i];
+  const set=()=>{cur=i;fig.src=A['o'+it.o];fig.alt=it.n;gm.innerHTML=textFor(it);paint()};
+  if(instant||RM){set();return}
+  busy2=true;fig.style.transition='transform .55s var(--ease),opacity .4s';fig.style.transform='rotateY(88deg) scale(.92)';fig.style.opacity=0;
+  setTimeout(()=>{set();fig.style.transition='none';fig.style.transform='rotateY(-88deg) scale(.92)';fig.getBoundingClientRect();
+    fig.style.transition='transform .9s var(--out),opacity .7s';fig.style.transform='none';fig.style.opacity=1;setTimeout(()=>busy2=false,500)},520);
+}
+vs.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+  if(b.dataset.t&&b.dataset.t!==tab){tab=b.dataset.t;show(ids()[0])}
+  else if(b.dataset.i)show(+b.dataset.i)});
+show(cur,true);
+}
+
+
+/* ================= VIEWER ================= */
+const V=$('#viewer'),stage=$('#vstage'),fly=$('#vfly'),vimg=$('#vimg'),panel=$('#vpanel');
+let list=ART,idx=0,fit={x:0,y:0,w:0,h:0},pinned=false,lastFocus=null;
+function layout(it){
+  const vw=innerWidth,vh=innerHeight,r=it.ratio;
+  let w=Math.min(vw*.84,(vh-190)*r);if(vw<720)w=Math.min(vw*.9,(vh-200)*r);
+  const h=w/r;fit={w,h,x:(vw-w)/2,y:Math.max(70,(vh-h)/2)};
+  Object.assign(fly.style,{left:fit.x+'px',top:fit.y+'px',width:w+'px',height:h+'px'});
+}
+const setPin=v=>{pinned=v;V.classList.toggle('pinned',v);$('#vinfo').textContent=v?'Hide details':'Details'};
+function fillPanel(it){
+  const parts=[`<button class="vtxt x" id="vpx">Close</button>`,
+   `<div class="k">${esc(it.kicker)}</div>`,`<h3>${esc(it.title)}</h3>`,metaHTML(it.meta),`<p>${esc(it.desc)}</p>`,
+   `<h4>${list===ART?'Details to look for':'Did you know'}</h4>`,`<ul>${it.notes.map(n=>`<li>${esc(n)}</li>`).join('')}</ul>`,
+   it.local?`<p class="src">Photo: Catholic Classic collection.</p>`:`<p class="src">Image: <a href="${PAGE(it)}" target="_blank" rel="noopener">Wikimedia Commons</a> (see the file page for its licence).</p>`];
+  panel.innerHTML=parts.map((p,i)=>p.replace(/^<(\w+)/,`<$1 style="--i:${i}"`)).join('');
+  $('#vpx').onclick=()=>setPin(false);
+  $('#vtitle').innerHTML=`${esc(it.title)}<small>${esc(it.kicker)}${it.meta[0][1]!==it.kicker&&list===ART?' · '+esc(it.meta[0][1]):''}</small>`;
+  $('#vcount').textContent=String(idx+1).padStart(2,'0')+' / '+String(list.length).padStart(2,'0');
+}
+function loadImg(it){
+  fly.classList.remove('err');$('#vfb').textContent=it.title+' — needs an internet connection';vimg.onerror=()=>fly.classList.add('err');
+  vimg.src=W(it,list===CAT?900:700);vimg.alt=it.title;
+  const hi=new Image();hi.onload=()=>{if(list[idx]===it)vimg.src=hi.src};hi.src=W(it,2200);
+}
+function flip(el,inverse,done){
+  const f=fly.getBoundingClientRect();
+  if(!el||RM){done&&done();return}
+  const r=el.getBoundingClientRect();
+  const t=`translate(${r.left-f.left}px,${r.top-f.top}px) scale(${r.width/f.width},${r.height/f.height})`;
+  if(!inverse){fly.style.transition='none';fly.style.transform=t;fly.getBoundingClientRect();fly.style.transition='transform 1s var(--ease)';fly.style.transform='none';done&&setTimeout(done,1000)}
+  else{fly.style.transition='transform .85s var(--ease)';fly.style.transform=t;setTimeout(done,850)}
+}
+function srcFor(){return list===ART?gal.querySelector(`.pc[data-i="${idx}"] .pimg`):(idx===cur?chEls[cur]:null)}
+function openViewer(l,i,el){
+  list=l;idx=i;lastFocus=document.activeElement;
+  const it=list[idx];layout(it);fillPanel(it);loadImg(it);setPin(false);
+  V.classList.add('open');document.body.style.overflow='hidden';
+  if(el)el.style.visibility='hidden';
+  flip(el,false,()=>{if(el)el.style.visibility='';if(innerWidth>720)setPin(true)});
+  setTimeout(()=>$('#vclose').focus(),50);
+}
+function closeViewer(){
+  setPin(false);
+  const el=srcFor();const vis=el&&(()=>{const r=el.getBoundingClientRect();return r.bottom>0&&r.top<innerHeight})();
+  const end=()=>{V.classList.remove('open');fly.style.transition='none';fly.style.transform='none';fly.style.opacity='';document.body.style.overflow='';if(el)el.style.visibility='';lastFocus&&lastFocus.focus&&lastFocus.focus({preventScroll:true})};
+  if(vis){el.style.visibility='hidden';flip(el,true,end)}
+  else{fly.style.transition='opacity .5s,transform .5s var(--ease)';fly.style.transform='scale(.92)';fly.style.opacity=0;setTimeout(end,500)}
+}
+let busy=false;
+function go(d){
+  if(busy)return;busy=true;
+  const n=(idx+d+list.length)%list.length;
+  fly.style.transition='transform .55s var(--ease),opacity .45s';fly.style.transform=`perspective(1200px) translateX(${-d*60}px) rotateY(${d*28}deg)`;fly.style.opacity=0;
+  setTimeout(()=>{idx=n;const it=list[idx];layout(it);fillPanel(it);loadImg(it);
+    fly.style.transition='none';fly.style.transform=`perspective(1200px) translateX(${d*60}px) rotateY(${-d*28}deg)`;fly.getBoundingClientRect();
+    fly.style.transition='transform .8s var(--out),opacity .6s';fly.style.transform='none';fly.style.opacity=1;
+    if(list===CAT)setCath(idx);
+    setTimeout(()=>busy=false,500);
+  },460);
+}
+$('#vclose').onclick=closeViewer;$('#vprev').onclick=()=>go(-1);$('#vnext').onclick=()=>go(1);
+$('#vinfo').onclick=()=>setPin(!pinned);
+addEventListener('keydown',e=>{if(!V.classList.contains('open'))return;
+  if(e.key==='Escape')closeViewer();else if(e.key==='ArrowRight')go(1);else if(e.key==='ArrowLeft')go(-1);
+  else if(e.key==='Tab'){const f=[...V.querySelectorAll('button,a')].filter(b=>b.offsetParent);if(!f.length)return;const a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}});
+let vx=null;
+stage.addEventListener('pointerdown',e=>{vx=e.clientX});
+stage.addEventListener('pointerup',e=>{if(vx==null)return;const d=e.clientX-vx;vx=null;
+  if(Math.abs(d)>70)go(d<0?1:-1);else if(Math.abs(d)<6&&!e.target.closest('.fly'))closeViewer()});
+addEventListener('resize',()=>{if(V.classList.contains('open'))layout(list[idx])});
+}
+</script>
+</body>
+</html>
